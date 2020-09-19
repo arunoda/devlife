@@ -5,30 +5,38 @@ using UnityEngine;
 
 public class Drop : MonoBehaviour
 {
-    private bool freezed = false;
+    private bool causedFreezing = false;
     void Start()
     {
-        
+        GameConfig.current.OnFreezeChange(WithFreezeChange);
+    }
+
+    private void OnDestroy()
+    {
+        GameConfig.current.OffFreezeChange(WithFreezeChange);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (freezed)
+        if (causedFreezing)
         {
             return;
         }
-        transform.position += Vector3.down * (GameConfig.Current.dropSpeed * Time.deltaTime);
+        transform.position += Vector3.down * (GameConfig.current.dropSpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // This prevent hitting a freezed drop on the floor.
+        if (GameConfig.current.IsFreezed()) return;
+        
         if (other.CompareTag("Floor"))
         {
-            GameConfig.Current.RenderExplodeGround(transform.position);
+            GameConfig.current.RenderExplodeGround(transform.position);
         } else if (other.CompareTag("Player"))
         {
-            GameConfig.Current.RenderExplodeDev(transform.position);
+            GameConfig.current.RenderExplodeDev(transform.position);
             if (gameObject.name.Contains("Twitter"))
             {
                 StartCoroutine(HandleTwitterHit());
@@ -41,19 +49,27 @@ public class Drop : MonoBehaviour
 
     private void Hide()
     {
-        var screenSize = GameConfig.Current.GetScreenSize();
+        var screenSize = GameConfig.current.GetScreenSize();
         transform.position = new Vector3(screenSize.x + 10, screenSize.y + 10, 0);
     }
 
     private IEnumerator HandleTwitterHit()
     {
-        freezed = true;
+        causedFreezing = true;
         Hide();
 
-        GameConfig.Current.Freeze();
-        yield return new WaitForSeconds(2);
+        GameConfig.current.Freeze();
+        yield return new WaitForSeconds(3);
         
-        GameConfig.Current.UnFreeze();
+        GameConfig.current.UnFreeze();
         Destroy(gameObject);
+    }
+
+    private void WithFreezeChange(bool isFreezed)
+    {
+        // We don't need to handle if this drop caused the freezing
+        if (causedFreezing) return;
+        
+        gameObject.SetActive(!isFreezed);
     }
 }

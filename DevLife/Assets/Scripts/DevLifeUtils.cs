@@ -21,4 +21,14 @@ public class DevLifeUtils
         {
                 return new Vector2(p.x, value);
         }
+
+        public static Vector3 Clone(Vector3 p)
+        {
+                return new Vector3(p.x, p.y, p.z);
+        }
+        
+        public static Vector2 Clone(Vector2 p)
+        {
+                return new Vector3(p.x, p.y);
+        }
 }

@@ -13,8 +13,7 @@ public class GameDev : MonoBehaviour
        
     private Animator anim;
     private Camera mainCamera;
-    private bool freezed = false;
-    private float defaultYPosition;
+    private Vector3 prevPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +21,13 @@ public class GameDev : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         anim = dev.GetComponent<Animator>();
         mainCamera  = Camera.main;
+        prevPosition = DevLifeUtils.Clone(transform.position);
+        GameConfig.current.OnFreezeChange(WithFreezeChange);
+    }
+
+    private void OnDestroy()
+    {
+        GameConfig.current.OffFreezeChange(WithFreezeChange);
     }
 
     void Update()
@@ -33,24 +39,10 @@ public class GameDev : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (GameConfig.Current.IsFreezed())
-        {
-            freezed = true;
-            transform.position = DevLifeUtils.ChangeY(transform.position, 0);
-            body.velocity = Vector2.zero;
-            return;
-        }
-
-        if (freezed)
-        {
-            transform.position = DevLifeUtils.ChangeY(transform.position, defaultYPosition);
-            freezed = false;
-        }
+        if (GameConfig.current.IsFreezed()) return;
 
         directionX = GetDirection();
         Vector2 movement = new Vector2(directionX * speed, 0);
-
-        defaultYPosition = transform.position.y;
         body.velocity = movement;
     }
 
@@ -89,5 +81,18 @@ public class GameDev : MonoBehaviour
         {
             anim.SetBool("isRunning", false);
         }
+    }
+
+    private void WithFreezeChange(bool isFreezed)
+    {
+        if (isFreezed)
+        {
+            prevPosition = DevLifeUtils.Clone(transform.position);
+            transform.position = DevLifeUtils.ChangeY(prevPosition, 0);
+            body.velocity = Vector2.zero;
+            return;
+        }
+
+        transform.position = prevPosition;
     }
 }

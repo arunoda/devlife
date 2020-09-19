@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class GameConfig : MonoBehaviour
@@ -15,18 +14,21 @@ public class GameConfig : MonoBehaviour
     public float dropSpeed = 3;
     public int noOfDropsInScreen = 1;
 
-    private Camera _mainCamera;
-    private int _prevScreenWidthPixels = 0;
+    public static GameConfig current;
+    
+    private Camera mainCamera;
+    private int prevScreenWidthPixels = 0;
     private Coroutine spawnDropsHandler;
-    private bool freezed = false;
+    private bool freezed = true;
 
-    public static GameConfig Current;
+    public delegate void FreezeChangeHandler(bool isFreezed);
+    private FreezeChangeHandler freezeHandlers;
 
     // Start is called before the first frame update
     void Start()
     {
-        _mainCamera = Camera.main;
-        GameConfig.Current = this;
+        mainCamera = Camera.main;
+        GameConfig.current = this;
 
         UnFreeze();
     }
@@ -48,12 +50,12 @@ public class GameConfig : MonoBehaviour
     public Vector3 GetScreenSize()
     {
         var screenSizePixels = new Vector3(Screen.width, Screen.height, 0);
-        return _mainCamera.ScreenToWorldPoint(screenSizePixels);
+        return mainCamera.ScreenToWorldPoint(screenSizePixels);
     }
     
     private void ChangeWallPositionsPerScreenSize()
     {
-        if (_prevScreenWidthPixels == Screen.width)
+        if (prevScreenWidthPixels == Screen.width)
         {
             return;
         }
@@ -70,7 +72,7 @@ public class GameConfig : MonoBehaviour
         devPosition = new Vector3(0, devPosition.y, devPosition.z);
         gameDev.transform.position = devPosition;
 
-        _prevScreenWidthPixels = Screen.width;
+        prevScreenWidthPixels = Screen.width;
     }
 
     public void RenderExplodeDev(Vector3 position)
@@ -98,18 +100,33 @@ public class GameConfig : MonoBehaviour
 
     public void Freeze()
     {
+        if (freezed) return;
         freezed = true;
+        freezeHandlers?.Invoke(true);
         StopCoroutine(spawnDropsHandler);
     }
 
     public void UnFreeze()
     {
+        if (!freezed) return;
         freezed = false;
+        freezeHandlers?.Invoke(false);
         spawnDropsHandler = StartCoroutine(SpawnDrops());
     }
 
     public bool IsFreezed()
     {
         return freezed;
+    }
+    
+    public void OnFreezeChange(FreezeChangeHandler e)
+    {
+        freezeHandlers += e;
+    }
+
+    public void OffFreezeChange(FreezeChangeHandler e)
+    {
+        if (freezeHandlers == null) return;
+        freezeHandlers -= e;
     }
 }
