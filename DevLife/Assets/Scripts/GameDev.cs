@@ -32,6 +32,8 @@ public class GameDev : MonoBehaviour
 
     void Update()
     {
+        if (GameConfig.current.IsFreezed()) return;
+        
         this.ChangeDirection();
         this.ChangeAnimation();
     }
@@ -90,9 +92,15 @@ public class GameDev : MonoBehaviour
             prevPosition = DevLifeUtils.Clone(transform.position);
             transform.position = DevLifeUtils.ChangeY(prevPosition, 0);
             body.velocity = Vector2.zero;
+            anim.SetBool("isFreezedWithTwitter", true);
+
+            // Rotate the user where they always looking at the empty space
+            float yRotate = transform.position.x > 0 ? 180 : 0;
+            transform.eulerAngles = new Vector3(0, yRotate, 0 );
             return;
         }
 
         transform.position = prevPosition;
+        anim.SetBool("isFreezedWithTwitter", false);
     }
 }

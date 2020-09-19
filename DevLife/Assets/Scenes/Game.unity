@@ -123,6 +123,68 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &66575963
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4700812457310847512, guid: a979f5a350f0c46f7be659e5e6cbbdf2, type: 3}
+      propertyPath: m_Name
+      value: TwitterStrom
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700812457310847517, guid: a979f5a350f0c46f7be659e5e6cbbdf2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700812457310847517, guid: a979f5a350f0c46f7be659e5e6cbbdf2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700812457310847517, guid: a979f5a350f0c46f7be659e5e6cbbdf2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700812457310847517, guid: a979f5a350f0c46f7be659e5e6cbbdf2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700812457310847517, guid: a979f5a350f0c46f7be659e5e6cbbdf2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700812457310847517, guid: a979f5a350f0c46f7be659e5e6cbbdf2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700812457310847517, guid: a979f5a350f0c46f7be659e5e6cbbdf2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700812457310847517, guid: a979f5a350f0c46f7be659e5e6cbbdf2, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700812457310847517, guid: a979f5a350f0c46f7be659e5e6cbbdf2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700812457310847517, guid: a979f5a350f0c46f7be659e5e6cbbdf2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700812457310847517, guid: a979f5a350f0c46f7be659e5e6cbbdf2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a979f5a350f0c46f7be659e5e6cbbdf2, type: 3}
+--- !u!1 &66575964 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4700812457310847512, guid: a979f5a350f0c46f7be659e5e6cbbdf2, type: 3}
+  m_PrefabInstance: {fileID: 66575963}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &88521378
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +363,7 @@ MonoBehaviour:
   gameDev: {fileID: 1641400353}
   explodeDev: {fileID: 2224192421861727087, guid: 5eae9b5aa64af4a5ebd57f6147c5248a, type: 3}
   explodeGround: {fileID: 3065416653198556346, guid: 0909f447b55d0476ab28f00e87149d4a, type: 3}
+  twitterStrom: {fileID: 66575964}
   dropSpeed: 5
   noOfDropsInScreen: 2
 --- !u!4 &381877631

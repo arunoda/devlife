@@ -10,6 +10,7 @@ public class GameConfig : MonoBehaviour
     public GameObject gameDev;
     public GameObject explodeDev;
     public GameObject explodeGround;
+    public GameObject twitterStrom;
 
     public float dropSpeed = 3;
     public int noOfDropsInScreen = 1;
@@ -104,6 +105,15 @@ public class GameConfig : MonoBehaviour
         freezed = true;
         freezeHandlers?.Invoke(true);
         StopCoroutine(spawnDropsHandler);
+        
+        // Show the twitter strom
+        var gameDevPos = gameDev.transform.position;
+        twitterStrom.transform.position = new Vector3(
+            gameDevPos.x > 0 ? gameDevPos.x -3 : gameDevPos.x + 3,
+            2,
+            gameDevPos.z
+            );
+        twitterStrom.SetActive(true);
     }
 
     public void UnFreeze()
@@ -112,6 +122,7 @@ public class GameConfig : MonoBehaviour
         freezed = false;
         freezeHandlers?.Invoke(false);
         spawnDropsHandler = StartCoroutine(SpawnDrops());
+        twitterStrom.SetActive(false);
     }
 
     public bool IsFreezed()
