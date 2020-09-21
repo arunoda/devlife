@@ -5,9 +5,24 @@ using UnityEngine;
 
 public class Drop : MonoBehaviour
 {
+    private GameConfig.DropType type;
     private bool causedFreezing = false;
     void Start()
     {
+        if (gameObject.name.Contains("Twitter")) {
+            type = GameConfig.DropType.TWITTER;
+        } else if (gameObject.name.Contains("Youtube"))
+        {
+            type = GameConfig.DropType.YOUTUBE;
+        }
+        else if (gameObject.name.Contains("Stack"))
+        {
+            type = GameConfig.DropType.STACKOVERFLOW;
+        } else
+        {
+            throw new Exception("Unknown drop: " + gameObject.name);
+        }
+
         GameConfig.current.OnFreezeChange(WithFreezeChange);
     }
 
@@ -16,6 +31,8 @@ public class Drop : MonoBehaviour
         GameConfig.current.OffFreezeChange(WithFreezeChange);
     }
 
+    
+
     // Update is called once per frame
     void Update()
     {
@@ -23,7 +40,7 @@ public class Drop : MonoBehaviour
         {
             return;
         }
-        transform.position += Vector3.down * (GameConfig.current.dropSpeed * Time.deltaTime);
+        transform.position += Vector3.down * (GameConfig.current.GetDropSpeed() * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -36,8 +53,9 @@ public class Drop : MonoBehaviour
             GameConfig.current.RenderExplodeGround(transform.position);
         } else if (other.CompareTag("Player"))
         {
+            GameConfig.current.NotifyHit(type);
             GameConfig.current.RenderExplodeDev(transform.position);
-            if (gameObject.name.Contains("Twitter"))
+            if (type == GameConfig.DropType.TWITTER)
             {
                 StartCoroutine(HandleTwitterHit());
                 return;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameConfig : MonoBehaviour
 {
@@ -11,9 +12,27 @@ public class GameConfig : MonoBehaviour
     public GameObject explodeDev;
     public GameObject explodeGround;
     public GameObject twitterStrom;
+    public Text labelTasksCompleted;
+    public Text labelTimeLeft;
+    public Text labelTotalTasksCompleted;
+    public GameObject gameOverPanel;
 
-    public float dropSpeed = 3;
-    public int noOfDropsInScreen = 1;
+    public enum DropType
+    {
+        TWITTER,
+        YOUTUBE,
+        STACKOVERFLOW
+    };
+
+    private int gameTime = 60;
+    private float devSpeed = 10;
+    private float dropSpeed = 5;
+    private int noOfDropsInScreen = 2;
+
+    // point system
+    private int twitterHits = 0;
+    private int stackOverflowHits = 0;
+    private int youtubeHits = 0;
 
     public static GameConfig current;
     
@@ -21,6 +40,7 @@ public class GameConfig : MonoBehaviour
     private int prevScreenWidthPixels = 0;
     private Coroutine spawnDropsHandler;
     private bool freezed = true;
+    private bool gameOver = false;
 
     public delegate void FreezeChangeHandler(bool isFreezed);
     private FreezeChangeHandler freezeHandlers;
@@ -31,7 +51,9 @@ public class GameConfig : MonoBehaviour
         mainCamera = Camera.main;
         GameConfig.current = this;
 
+        StartCoroutine(nameof(GameTimer));
         UnFreeze();
+        gameOverPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -94,14 +116,47 @@ public class GameConfig : MonoBehaviour
         {
             SpawnDrop();
             var totalHeight = GetScreenSize().y * 2;
-            var spawnInterval = totalHeight / dropSpeed / noOfDropsInScreen;
+            var spawnInterval = totalHeight / GetDropSpeed() / noOfDropsInScreen;
             yield return new WaitForSeconds(spawnInterval);
         }
     }
 
+    private IEnumerator GameTimer()
+    {
+        labelTimeLeft.text = gameTime.ToString();
+
+        for (int lc=0; lc<=gameTime; lc++)
+        {
+            yield return new WaitForSeconds(1);
+            labelTimeLeft.text = (gameTime - lc).ToString();
+
+            // increase drop speed
+            if (lc > 0 && lc % 10 == 0)
+            {
+                dropSpeed += 0.5f;
+            }
+
+            // increase no of drops on the screen
+            if (lc > 0 && lc % 10 == 0)
+            {
+                noOfDropsInScreen += 1;
+            }
+
+        }
+
+        gameOver = true;
+        labelTotalTasksCompleted.text = labelTasksCompleted.text;
+        gameOverPanel.SetActive(true);
+        StopCoroutine(spawnDropsHandler);
+    }
+
     public void Freeze()
     {
-        if (freezed) return;
+        if (gameOver || freezed)
+        {
+            return;
+        }
+
         freezed = true;
         freezeHandlers?.Invoke(true);
         StopCoroutine(spawnDropsHandler);
@@ -118,7 +173,11 @@ public class GameConfig : MonoBehaviour
 
     public void UnFreeze()
     {
-        if (!freezed) return;
+        if (gameOver || !freezed)
+        {
+            return;
+        }
+
         freezed = false;
         freezeHandlers?.Invoke(false);
         spawnDropsHandler = StartCoroutine(SpawnDrops());
@@ -139,5 +198,41 @@ public class GameConfig : MonoBehaviour
     {
         if (freezeHandlers == null) return;
         freezeHandlers -= e;
+    }
+
+    public float GetDropSpeed()
+    {
+        return dropSpeed;
+    }
+
+    public float GetDevSpeed()
+    {
+        return devSpeed;
+    }
+
+    public void NotifyHit(DropType type)
+    {
+        switch(type)
+        {
+            case DropType.TWITTER:
+                twitterHits += 1;
+                break;
+            case DropType.YOUTUBE:
+                youtubeHits += 1;
+                break;
+            case DropType.STACKOVERFLOW:
+                stackOverflowHits += 1;
+                break;
+            default:
+                throw new System.Exception("Unsupported Notify Hit: " + type);
+        }
+
+        UpdateTasksCompleted();
+    }
+
+    private void UpdateTasksCompleted()
+    {
+        int tasksCompleted = youtubeHits + stackOverflowHits;
+        labelTasksCompleted.text = tasksCompleted.ToString();
     }
 }

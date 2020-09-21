@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class GameDev : MonoBehaviour
 {
-    private float speed = 10;
     private float directionX;
     private Rigidbody2D body;
 
@@ -44,7 +43,7 @@ public class GameDev : MonoBehaviour
         if (GameConfig.current.IsFreezed()) return;
 
         directionX = GetDirection();
-        Vector2 movement = new Vector2(directionX * speed, 0);
+        Vector2 movement = new Vector2(directionX * GameConfig.current.GetDevSpeed(), 0);
         body.velocity = movement;
     }
 

@@ -41,6 +41,7 @@
 		<type fullname="UnityEngine.LightmapSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.Rigidbody2D" preserve="nothing"/>
 		<type fullname="UnityEngine.BoxCollider2D" preserve="nothing"/>
+		<type fullname="UnityEngine.Font" preserve="nothing"/>
 		<type fullname="UnityEngine.ParticleSystemRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.ParticleSystem" preserve="nothing"/>
 		<type fullname="UnityEngine.Mesh" preserve="nothing"/>
@@ -59,5 +60,6 @@
 		<type fullname="UnityEngine.UI.CanvasScaler" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.GraphicRaycaster" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Image" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.Text" preserve="nothing"/>
 	</assembly>
 </linker>

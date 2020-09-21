@@ -4280,19 +4280,19 @@ static  PlayableOutput_tE735DC774F014DB1711310988F2F914C66520F82  UnresolvedVirt
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_142 (RuntimeObject * __this, RuntimeObject * ___Object1, uint32_t ___UInt322, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_142 (RuntimeObject * __this, float ___Single1, float ___Single2, const RuntimeMethod* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  Range_t70C133E51417BC822E878050C90A577A69B671DC  UnresolvedVirtualCall_143 (RuntimeObject * __this, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_143 (RuntimeObject * __this, RuntimeObject * ___Object1, uint32_t ___UInt322, const RuntimeMethod* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();
 }
 
-static  void UnresolvedVirtualCall_144 (RuntimeObject * __this, float ___Single1, float ___Single2, const RuntimeMethod* method)
+static  Range_t70C133E51417BC822E878050C90A577A69B671DC  UnresolvedVirtualCall_144 (RuntimeObject * __this, const RuntimeMethod* method)
 {
 	il2cpp_codegen_raise_execution_engine_exception(method);
 	il2cpp_codegen_no_return();

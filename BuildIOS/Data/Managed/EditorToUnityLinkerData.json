@@ -239,7 +239,8 @@
             "fullManagedTypeName": "UnityEngine.Canvas",
             "moduleName": "UI",
             "usedInScenes": [
-                "Assets/Scenes/Welcome.unity"
+                "Assets/Scenes/Welcome.unity",
+                "Assets/Scenes/Game.unity"
             ]
         },
         {
@@ -418,7 +419,8 @@
             "fullManagedTypeName": "UnityEngine.RectTransform",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/Welcome.unity"
+                "Assets/Scenes/Welcome.unity",
+                "Assets/Scenes/Game.unity"
             ]
         },
         {
@@ -437,7 +439,8 @@
             "fullManagedTypeName": "UnityEngine.CanvasRenderer",
             "moduleName": "UI",
             "usedInScenes": [
-                "Assets/Scenes/Welcome.unity"
+                "Assets/Scenes/Welcome.unity",
+                "Assets/Scenes/Game.unity"
             ]
         },
         {
@@ -474,6 +477,15 @@
             "nativeClass": "BoxCollider2D",
             "fullManagedTypeName": "UnityEngine.BoxCollider2D",
             "moduleName": "Physics2D",
+            "usedInScenes": [
+                "Assets/Scenes/Game.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Font",
+            "fullManagedTypeName": "UnityEngine.Font",
+            "moduleName": "TextRendering",
             "usedInScenes": [
                 "Assets/Scenes/Game.unity"
             ]
@@ -581,6 +593,13 @@
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.Image",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.Text",
             "moduleName": "",
             "usedInScenes": []
         }
