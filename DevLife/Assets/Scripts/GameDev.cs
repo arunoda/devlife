@@ -26,7 +26,10 @@ public class GameDev : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameConfig.current.OffFreezeChange(WithFreezeChange);
+        if (GameConfig.current)
+        {
+            GameConfig.current.OffFreezeChange(WithFreezeChange);
+        }
     }
 
     void Update()

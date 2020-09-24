@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +14,7 @@ public class GameConfig : MonoBehaviour
     public Text labelTasksCompleted;
     public Text labelTimeLeft;
     public Text labelTotalTasksCompleted;
+    public Text playPauseButton;
     public GameObject gameOverPanel;
 
     public enum DropType
@@ -51,6 +51,7 @@ public class GameConfig : MonoBehaviour
         mainCamera = Camera.main;
         GameConfig.current = this;
 
+        EnsureResume();
         StartCoroutine(nameof(GameTimer));
         UnFreeze();
         gameOverPanel.SetActive(false);
@@ -127,7 +128,7 @@ public class GameConfig : MonoBehaviour
 
         for (int lc=0; lc<=gameTime; lc++)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSecondsRealtime(1);
             labelTimeLeft.text = "Time Left: " + (gameTime - lc);
 
             // increase drop speed
@@ -144,6 +145,7 @@ public class GameConfig : MonoBehaviour
 
         }
 
+        EnsureResume();
         gameOver = true;
         labelTotalTasksCompleted.text = GetTasksCompleted().ToString();
         gameOverPanel.SetActive(true);
@@ -238,5 +240,22 @@ public class GameConfig : MonoBehaviour
     private void UpdateTasksCompleted()
     {
         labelTasksCompleted.text = "Tasks: " + GetTasksCompleted();
+    }
+
+    public void PauseOrResume()
+    {
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1f;
+        } else
+        {
+            Time.timeScale = 0f;
+        }
+    }
+
+    public void EnsureResume()
+    {
+        Time.timeScale = 1f;
+        playPauseButton.text = "Pause";
     }
 }
