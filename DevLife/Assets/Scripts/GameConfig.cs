@@ -123,12 +123,12 @@ public class GameConfig : MonoBehaviour
 
     private IEnumerator GameTimer()
     {
-        labelTimeLeft.text = gameTime.ToString();
+        labelTimeLeft.text = "Time Left: " + gameTime;
 
         for (int lc=0; lc<=gameTime; lc++)
         {
             yield return new WaitForSeconds(1);
-            labelTimeLeft.text = (gameTime - lc).ToString();
+            labelTimeLeft.text = "Time Left: " + (gameTime - lc);
 
             // increase drop speed
             if (lc > 0 && lc % 10 == 0)
@@ -145,7 +145,7 @@ public class GameConfig : MonoBehaviour
         }
 
         gameOver = true;
-        labelTotalTasksCompleted.text = labelTasksCompleted.text;
+        labelTotalTasksCompleted.text = GetTasksCompleted().ToString();
         gameOverPanel.SetActive(true);
         StopCoroutine(spawnDropsHandler);
     }
@@ -230,9 +230,13 @@ public class GameConfig : MonoBehaviour
         UpdateTasksCompleted();
     }
 
+    private int GetTasksCompleted()
+    {
+        return youtubeHits + stackOverflowHits;
+    }
+
     private void UpdateTasksCompleted()
     {
-        int tasksCompleted = youtubeHits + stackOverflowHits;
-        labelTasksCompleted.text = tasksCompleted.ToString();
+        labelTasksCompleted.text = "Tasks: " + GetTasksCompleted();
     }
 }

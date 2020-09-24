@@ -41,7 +41,7 @@
 		555B47E181806B74A39A7354 /* Il2CppCompilerCalculateTypeValuesTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A9453693BCD8738D457877 /* Il2CppCompilerCalculateTypeValuesTable.cpp */; };
 		5623C57617FDCB0800090B9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		5623C57717FDCB0800090B9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 830B5C100E5ED4C100C7819F /* UIKit.framework */; };
-		5623C57D17FDCB0900090B9E = {isa = PBXBuildFile; fileRef = 5623C57B17FDCB0900090B9E /* InfoPlist.strings */; };
+		5623C57D17FDCB0900090B9E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5623C57B17FDCB0900090B9E /* InfoPlist.strings */; };
 		5623C57F17FDCB0900090B9E /* Unity_iPhone_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5623C57E17FDCB0900090B9E /* Unity_iPhone_Tests.m */; };
 		56C56C9817D6015200616839 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C56C9717D6015100616839 /* Images.xcassets */; };
 		58644E178982C2578301B3C2 /* UnityEngine.IMGUIModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D634DC5A12766238F710BB9 /* UnityEngine.IMGUIModule.cpp */; };
@@ -1006,7 +1006,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5623C57D17FDCB0900090B9E,
+				5623C57D17FDCB0900090B9E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1265,7 +1265,7 @@
 					"$(inherited)",
 					"$(OTHER_CFLAGS)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DefaultCompany.${PRODUCT_NAME:rfc1123identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = me.arunoda.devlife;
 				PRODUCT_NAME = "$(PRODUCT_NAME_APP)";
 				PROVISIONING_PROFILE = "$(PROVISIONING_PROFILE_APP)";
 				PROVISIONING_PROFILE_APP = "";
@@ -1308,7 +1308,7 @@
 					"$(inherited)",
 					"$(OTHER_CFLAGS)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DefaultCompany.${PRODUCT_NAME:rfc1123identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = me.arunoda.devlife;
 				PRODUCT_NAME = "$(PRODUCT_NAME_APP)";
 				PROVISIONING_PROFILE = "$(PROVISIONING_PROFILE_APP)";
 				PROVISIONING_PROFILE_APP = "";
@@ -1470,7 +1470,7 @@
 					"$(inherited)",
 					"$(OTHER_CFLAGS)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DefaultCompany.${PRODUCT_NAME:rfc1123identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = me.arunoda.devlife;
 				PRODUCT_NAME = "$(PRODUCT_NAME_APP)";
 				PROVISIONING_PROFILE = "$(PROVISIONING_PROFILE_APP)";
 				PROVISIONING_PROFILE_APP = "";
@@ -1579,7 +1579,7 @@
 					"$(inherited)",
 					"$(OTHER_CFLAGS)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DefaultCompany.${PRODUCT_NAME:rfc1123identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = me.arunoda.devlife;
 				PRODUCT_NAME = "$(PRODUCT_NAME_APP)";
 				PROVISIONING_PROFILE = "$(PROVISIONING_PROFILE_APP)";
 				PROVISIONING_PROFILE_APP = "";
