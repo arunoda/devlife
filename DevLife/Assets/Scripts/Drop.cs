@@ -41,6 +41,7 @@ public class Drop : MonoBehaviour
             return;
         }
         transform.position += Vector3.down * (GameConfig.current.GetDropSpeed() * Time.deltaTime);
+        transform.position += Vector3.left * (GameConfig.current.GetWalkSpeed() * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -51,6 +52,7 @@ public class Drop : MonoBehaviour
         if (other.CompareTag("Floor"))
         {
             GameConfig.current.RenderExplodeGround(transform.position);
+            Destroy(gameObject);
         } else if (other.CompareTag("Player"))
         {
             GameConfig.current.NotifyHit(type);
@@ -60,9 +62,9 @@ public class Drop : MonoBehaviour
                 StartCoroutine(HandleTwitterHit());
                 return;
             }
+            Destroy(gameObject);
         }
         
-        Destroy(gameObject);
     }
 
     private void Hide()

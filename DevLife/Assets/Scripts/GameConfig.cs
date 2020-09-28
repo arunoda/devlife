@@ -16,6 +16,7 @@ public class GameConfig : MonoBehaviour
     public Text labelTotalTasksCompleted;
     public Text playPauseButton;
     public GameObject gameOverPanel;
+    public GameObject streetLight;
 
     public enum DropType
     {
@@ -27,7 +28,9 @@ public class GameConfig : MonoBehaviour
     private int gameTime = 60;
     private float devSpeed = 10;
     private float dropSpeed = 5;
+    private float walkSpeed = 1;
     private int noOfDropsInScreen = 2;
+    private int noOfStreetLightsInScreen = 2;
 
     // point system
     private int twitterHits = 0;
@@ -39,6 +42,7 @@ public class GameConfig : MonoBehaviour
     private Camera mainCamera;
     private int prevScreenWidthPixels = 0;
     private Coroutine spawnDropsHandler;
+    private Coroutine spawnLightsHandler;
     private bool freezed = true;
     private bool gameOver = false;
 
@@ -54,6 +58,7 @@ public class GameConfig : MonoBehaviour
         EnsureResume();
         StartCoroutine(nameof(GameTimer));
         UnFreeze();
+        spawnLightsHandler = StartCoroutine(SpawnLights());
         gameOverPanel.SetActive(false);
     }
 
@@ -61,14 +66,6 @@ public class GameConfig : MonoBehaviour
     void Update()
     {
         ChangeWallPositionsPerScreenSize();
-    }
-
-    private void SpawnDrop()
-    {
-        var screenSize = GetScreenSize();
-        var xPos = Random.Range(-screenSize.x + 0.5f, screenSize.x - 0.5f);
-        var drop = drops[Random.Range(0, drops.Length)];
-        Instantiate(drop, new Vector2(xPos, screenSize.y), Quaternion.identity);
     }
 
     public Vector3 GetScreenSize()
@@ -107,7 +104,7 @@ public class GameConfig : MonoBehaviour
 
     public void RenderExplodeGround(Vector3 position)
     {
-        position.y -= 0.5f;
+        position.y -= 0.0f;
         Instantiate(explodeGround, position, Quaternion.identity);
     }
 
@@ -115,9 +112,31 @@ public class GameConfig : MonoBehaviour
     {
         while (true)
         {
-            SpawnDrop();
-            var totalHeight = GetScreenSize().y * 2;
+            // Spawn the drop
+            var screenSize = GetScreenSize();
+            var xPos = Random.Range(-screenSize.x + 0.5f, screenSize.x - 0.5f);
+            var drop = drops[Random.Range(0, drops.Length)];
+            Instantiate(drop, new Vector2(xPos, screenSize.y), Quaternion.identity);
+
+
+            var totalHeight = screenSize.y * 2;
             var spawnInterval = totalHeight / GetDropSpeed() / noOfDropsInScreen;
+            yield return new WaitForSeconds(spawnInterval);
+        }
+    }
+
+    private IEnumerator SpawnLights()
+    {
+        while(true)
+        {
+            // Spawn the lamp
+            Vector3 screenSize = GetScreenSize();
+            float xPos = screenSize.x + 1;
+            float yPos = -screenSize.y;
+            Instantiate(streetLight, new Vector2(xPos, yPos), Quaternion.identity);
+
+            var totalWidth = screenSize.x * 2;
+            var spawnInterval = totalWidth / GetWalkSpeed() / noOfStreetLightsInScreen;
             yield return new WaitForSeconds(spawnInterval);
         }
     }
@@ -150,6 +169,7 @@ public class GameConfig : MonoBehaviour
         labelTotalTasksCompleted.text = GetTasksCompleted().ToString();
         gameOverPanel.SetActive(true);
         StopCoroutine(spawnDropsHandler);
+        StopCoroutine(spawnLightsHandler);
     }
 
     public void Freeze()
@@ -183,6 +203,7 @@ public class GameConfig : MonoBehaviour
         freezed = false;
         freezeHandlers?.Invoke(false);
         spawnDropsHandler = StartCoroutine(SpawnDrops());
+       
         twitterStrom.SetActive(false);
     }
 
@@ -205,6 +226,11 @@ public class GameConfig : MonoBehaviour
     public float GetDropSpeed()
     {
         return dropSpeed;
+    }
+
+    public float GetWalkSpeed()
+    {
+        return walkSpeed;
     }
 
     public float GetDevSpeed()
