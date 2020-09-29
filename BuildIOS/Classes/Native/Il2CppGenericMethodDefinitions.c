@@ -20,7 +20,7 @@ IL2CPP_EXTERN_C_END
 
 
 extern const Il2CppMethodSpec g_Il2CppMethodSpecTable[];
-const Il2CppMethodSpec g_Il2CppMethodSpecTable[8722] = 
+const Il2CppMethodSpec g_Il2CppMethodSpecTable[8723] = 
 {
 	{ 333, -1, 1 } /* System.Void System.ThrowHelper::IfNullAndNullsAreIllegalThenThrow<System.Object>(System.Object,System.ExceptionArgument) */,
 	{ 337, -1, 1 } /* System.Collections.ObjectModel.ReadOnlyCollection`1<T> System.Array::AsReadOnly<System.Object>(T[]) */,
@@ -2259,6 +2259,7 @@ const Il2CppMethodSpec g_Il2CppMethodSpecTable[8722] =
 	{ 10449, -1, 561 } /* !!0 UnityEngine.GameObject::GetComponent<UnityEngine.Animator>() */,
 	{ 10419, -1, 595 } /* !!0 UnityEngine.Component::GetComponent<UnityEngine.Light>() */,
 	{ 10449, -1, 461 } /* !!0 UnityEngine.GameObject::GetComponent<TMPro.TMP_Text>() */,
+	{ 8642, 372, -1 } /* !0[] System.Collections.Generic.List`1<UnityEngine.GameObject>::ToArray() */,
 	{ 10419, -1, 563 } /* !!0 UnityEngine.Component::GetComponent<TMPro.TextMeshProUGUI>() */,
 	{ 10903, 477, -1 } /* System.Void UnityEngine.Events.UnityAction`2<System.Char,System.Int32>::.ctor(System.Object,System.IntPtr) */,
 	{ 10908, 477, -1 } /* System.Void UnityEngine.Events.UnityEvent`2<System.Char,System.Int32>::AddListener(UnityEngine.Events.UnityAction`2<!0,!1>) */,

@@ -2569,7 +2569,6 @@ MonoBehaviour:
   labelTotalTasksCompleted: {fileID: 902408695}
   playPauseButton: {fileID: 644339656}
   gameOverPanel: {fileID: 1209368351}
-  streetLight: {fileID: 5211807705876403162, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
 --- !u!4 &381877631
 Transform:
   m_ObjectHideFlags: 0
@@ -3251,74 +3250,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1163111377}
-  - {fileID: 1998592265}
   - {fileID: 1760366590}
+  - {fileID: 1644726880}
+  - {fileID: 1695895886}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1163111372
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 910778590}
-    m_Modifications:
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403162, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_Name
-      value: StreetLight
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
---- !u!4 &1163111377 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-  m_PrefabInstance: {fileID: 1163111372}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1209368351
 GameObject:
   m_ObjectHideFlags: 0
@@ -3573,6 +3510,55 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6696966, y: 2.9767194}
   m_EdgeRadius: 0
+--- !u!1 &1644726878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1644726880}
+  - component: {fileID: 1644726879}
+  m_Layer: 0
+  m_Name: VendingMachinesBelt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1644726879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644726878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc3affadc6244fdaa0bd8f1491b0082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 2548011083886298712, guid: a2889630e0aba48c0823158f214769eb, type: 3}
+  speed: -1
+  spawnOffsetFromScreen: 2
+  destroyOffsetFromScreen: 2
+  spawnDistance: 18
+  spawnProbability: 0.8
+--- !u!4 &1644726880
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644726878}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.82, y: -4.98, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 910778590}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1692768067
 GameObject:
   m_ObjectHideFlags: 0
@@ -3648,6 +3634,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692768067}
   m_CullTransparentMesh: 0
+--- !u!1 &1695895885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1695895886}
+  - component: {fileID: 1695895887}
+  m_Layer: 0
+  m_Name: StreetLightBelt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1695895886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695895885}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.4, y: -5.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 910778590}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1695895887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695895885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc3affadc6244fdaa0bd8f1491b0082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 5211807705876403162, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
+  speed: -1
+  spawnOffsetFromScreen: 0
+  destroyOffsetFromScreen: 1
+  spawnDistance: 9
+  spawnProbability: 1
 --- !u!1 &1715934657
 GameObject:
   m_ObjectHideFlags: 0
@@ -3758,7 +3793,7 @@ Transform:
   m_Children:
   - {fileID: 375027279}
   m_Father: {fileID: 910778590}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &1760366591
 Grid:
@@ -3860,68 +3895,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797803522}
   m_CullTransparentMesh: 0
---- !u!1001 &1998592264
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 910778590}
-    m_Modifications:
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.0029701174
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9999956
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211807705876403162, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-      propertyPath: m_Name
-      value: StreetLight2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
---- !u!4 &1998592265 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5211807705876403160, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
-  m_PrefabInstance: {fileID: 1998592264}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2031450238
 PrefabInstance:
   m_ObjectHideFlags: 0

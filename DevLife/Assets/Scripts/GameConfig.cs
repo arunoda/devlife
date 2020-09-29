@@ -16,7 +16,6 @@ public class GameConfig : MonoBehaviour
     public Text labelTotalTasksCompleted;
     public Text playPauseButton;
     public GameObject gameOverPanel;
-    public GameObject streetLight;
 
     public enum DropType
     {
@@ -30,7 +29,6 @@ public class GameConfig : MonoBehaviour
     private float dropSpeed = 5;
     private float walkSpeed = 1;
     private int noOfDropsInScreen = 2;
-    private int noOfStreetLightsInScreen = 2;
 
     // point system
     private int twitterHits = 0;
@@ -42,7 +40,6 @@ public class GameConfig : MonoBehaviour
     private Camera mainCamera;
     private int prevScreenWidthPixels = 0;
     private Coroutine spawnDropsHandler;
-    private Coroutine spawnLightsHandler;
     private bool freezed = true;
     private bool gameOver = false;
 
@@ -58,7 +55,6 @@ public class GameConfig : MonoBehaviour
         EnsureResume();
         StartCoroutine(nameof(GameTimer));
         UnFreeze();
-        spawnLightsHandler = StartCoroutine(SpawnLights());
         gameOverPanel.SetActive(false);
     }
 
@@ -125,22 +121,6 @@ public class GameConfig : MonoBehaviour
         }
     }
 
-    private IEnumerator SpawnLights()
-    {
-        while(true)
-        {
-            // Spawn the lamp
-            Vector3 screenSize = GetScreenSize();
-            float xPos = screenSize.x + 1;
-            float yPos = -screenSize.y;
-            Instantiate(streetLight, new Vector2(xPos, yPos), Quaternion.identity);
-
-            var totalWidth = screenSize.x * 2;
-            var spawnInterval = totalWidth / GetWalkSpeed() / noOfStreetLightsInScreen;
-            yield return new WaitForSeconds(spawnInterval);
-        }
-    }
-
     private IEnumerator GameTimer()
     {
         labelTimeLeft.text = "Time Left: " + gameTime;
@@ -169,7 +149,6 @@ public class GameConfig : MonoBehaviour
         labelTotalTasksCompleted.text = GetTasksCompleted().ToString();
         gameOverPanel.SetActive(true);
         StopCoroutine(spawnDropsHandler);
-        StopCoroutine(spawnLightsHandler);
     }
 
     public void Freeze()

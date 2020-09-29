@@ -57,6 +57,7 @@
 		<type fullname="GameConfig" preserve="nothing"/>
 		<type fullname="GameDev" preserve="nothing"/>
 		<type fullname="MovingItem" preserve="nothing"/>
+		<type fullname="SpriteMovingBelt" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.TextMeshPro">
 		<type fullname="TMPro.TMP_ColorGradient" preserve="nothing"/>
