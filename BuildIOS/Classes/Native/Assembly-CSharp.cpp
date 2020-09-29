@@ -796,6 +796,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m3DD76DE838FA83DF972E0486A296345
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_mEE653047BDB3486ACC2E16DC6C3422A0BA48F01F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Clear_m30CC5EC96F262C98EE9BFCFC9CF8D09F67E0A23D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Clear_m508B72E5229FAE7042D99A04555F66F10C597C7A_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_Insert_m20E1169E78F3FA265DF56593B41EA0F271A990F8_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Remove_mD36BF07C31C1DF947856EFECE89BAF4D6A24DEB7_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Sort_mA28ABFC1E6C7A17EA71BC9C2DBED9CC3EE8DCDC3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_ToArray_m3A7E83C4E885F8DF9164674E883558383CD2368F_RuntimeMethod_var;
@@ -918,8 +919,8 @@ IL2CPP_EXTERN_C const uint32_t SkewTextExample_CopyAnimationCurve_m555177255F582
 IL2CPP_EXTERN_C const uint32_t SkewTextExample_WarpText_m0E0C46988600673F0E5DFA3133534DC6CA5950D3_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t SkewTextExample__ctor_m945059906734DD38CF860CD32B3E07635D0E1F86_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t SpriteMovingBelt_SpawnIfNeeded_mA69F3D864DE51132E0ECFD7A17D7656657DE5F4B_MetadataUsageId;
-IL2CPP_EXTERN_C const uint32_t SpriteMovingBelt_SpawnSpriteAndHide_m739CDCCB84B0517ED920C6739CB498B01A4EDF0C_MetadataUsageId;
-IL2CPP_EXTERN_C const uint32_t SpriteMovingBelt_SpawnSprite_m7180E798079FB265E19DDDF33693CD0F12199370_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t SpriteMovingBelt_SpawnSpriteAndHide_m16D4A7345456CC5B3658CF44B5D01AB34D49968F_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t SpriteMovingBelt_SpawnSprite_m11181E88B41FE78249A38B0F979CAB56614B13D3_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t SpriteMovingBelt_Update_m0B54E3E09D304BA504659A36DB0126C7ED9E613D_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t SpriteMovingBelt__ctor_m3FF34F54D76B9CD82CC828918D18F749FDA1FD68_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t SpriteSelectionEvent__ctor_m0F760052E9A5AF44A7AF7AC006CB4B24809590F2_MetadataUsageId;
@@ -21065,6 +21066,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool List_1_Remove_m753F7B4281CC4D02C07AE9072
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m5D847939ABB9A78203B062CAFFE975792174D00F_gshared_inline (List_1_t3F94120C77410A62EAE48421CF166B83AB95A2F5 * __this, const RuntimeMethod* method);
 // !0 System.Collections.Generic.List`1<System.Object>::get_Item(System.Int32)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject * List_1_get_Item_mF00B574E58FB078BB753B05A3B86DD0A7A266B63_gshared_inline (List_1_t3F94120C77410A62EAE48421CF166B83AB95A2F5 * __this, int32_t ___index0, const RuntimeMethod* method);
+// System.Void System.Collections.Generic.List`1<System.Object>::Insert(System.Int32,!0)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_Insert_mFC500A19C486C8ED4E9F3BDBA9B079602D647741_gshared (List_1_t3F94120C77410A62EAE48421CF166B83AB95A2F5 * __this, int32_t ___index0, RuntimeObject * ___item1, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.List`1<System.Object>::Add(!0)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_Add_mE5B3CBB3A625606D9BC4337FEAAF1D66BCB6F96E_gshared (List_1_t3F94120C77410A62EAE48421CF166B83AB95A2F5 * __this, RuntimeObject * ___item0, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.List`1<System.Object>::.ctor()
@@ -21556,8 +21559,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWarpTextU3Ed__7__ctor_mEAD3C39209B755
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Keyframe__ctor_mE08ED8666CB420F48B8D95B7D6B305A5ED0CFD9C (Keyframe_tBEEE79DF5E970E48A8972FFFCE8B25A6068ACE9F * __this, float ___time0, float ___value1, const RuntimeMethod* method);
 // System.Void UnityEngine.AnimationCurve::.ctor(UnityEngine.Keyframe[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationCurve__ctor_mDF6C1314A61F0E6F286865DD8BEA991795C07AC0 (AnimationCurve_t2D452A14820CEDB83BFF2C911682A4E59001AD03 * __this, KeyframeU5BU5D_tF817D582FE6B521008A03DDBB5D1326DD78DB0BC* ___keys0, const RuntimeMethod* method);
-// UnityEngine.GameObject SpriteMovingBelt::SpawnSprite()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * SpriteMovingBelt_SpawnSprite_m7180E798079FB265E19DDDF33693CD0F12199370 (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, const RuntimeMethod* method);
+// System.Void SpriteMovingBelt::MakeInitialSpawning()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpriteMovingBelt_MakeInitialSpawning_m92F32643EB29449ECFFCEEA8BD873406FCD199E6 (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, const RuntimeMethod* method);
 // !0[] System.Collections.Generic.List`1<UnityEngine.GameObject>::ToArray()
 inline GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* List_1_ToArray_m3A7E83C4E885F8DF9164674E883558383CD2368F (List_1_t6D0A10F47F3440798295D2FFFC6D016477AF38E5 * __this, const RuntimeMethod* method)
 {
@@ -21574,6 +21577,8 @@ inline bool List_1_Remove_mD36BF07C31C1DF947856EFECE89BAF4D6A24DEB7 (List_1_t6D0
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpriteMovingBelt_SpawnIfNeeded_mA69F3D864DE51132E0ECFD7A17D7656657DE5F4B (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, const RuntimeMethod* method);
 // UnityEngine.Vector3 SpriteMovingBelt::GetScreenSize()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  SpriteMovingBelt_GetScreenSize_m3C83EAD1D749E694ED72ABE3B94FE0DD66F24164 (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, const RuntimeMethod* method);
+// System.Single SpriteMovingBelt::GetDestroyX()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float SpriteMovingBelt_GetDestroyX_mBEDA9858F57FBC9B737C5C190DC96E5D5B1FB2BA (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, const RuntimeMethod* method);
 // System.Int32 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Count()
 inline int32_t List_1_get_Count_m6206A8F48C7A98B9CFC23A13548CB215717573BD_inline (List_1_t6D0A10F47F3440798295D2FFFC6D016477AF38E5 * __this, const RuntimeMethod* method)
 {
@@ -21586,8 +21591,19 @@ inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * List_1_get_Item_m1
 }
 // System.Single SpriteMovingBelt::GetSpawnX()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float SpriteMovingBelt_GetSpawnX_m98C593A8A2F7C1BCCBD9D6645B18DD4D2CAC3546 (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, const RuntimeMethod* method);
-// UnityEngine.GameObject SpriteMovingBelt::SpawnSpriteAndHide()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * SpriteMovingBelt_SpawnSpriteAndHide_m739CDCCB84B0517ED920C6739CB498B01A4EDF0C (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, const RuntimeMethod* method);
+// UnityEngine.Vector3 SpriteMovingBelt::GetDefaultStartPos()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  SpriteMovingBelt_GetDefaultStartPos_mBFF24A26837BF9962211C979C4F682DFE583BA17 (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, const RuntimeMethod* method);
+// UnityEngine.GameObject SpriteMovingBelt::SpawnWithProbability(UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * SpriteMovingBelt_SpawnWithProbability_m2DBA4C4FE1AA201D839B18D37D13C9D70C505A18 (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___startPos0, const RuntimeMethod* method);
+// UnityEngine.GameObject SpriteMovingBelt::SpawnSprite(UnityEngine.Vector3,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * SpriteMovingBelt_SpawnSprite_m11181E88B41FE78249A38B0F979CAB56614B13D3 (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___startPos0, bool ___addToFront1, const RuntimeMethod* method);
+// UnityEngine.GameObject SpriteMovingBelt::SpawnSpriteAndHide(UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * SpriteMovingBelt_SpawnSpriteAndHide_m16D4A7345456CC5B3658CF44B5D01AB34D49968F (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___startPos0, const RuntimeMethod* method);
+// System.Void System.Collections.Generic.List`1<UnityEngine.GameObject>::Insert(System.Int32,!0)
+inline void List_1_Insert_m20E1169E78F3FA265DF56593B41EA0F271A990F8 (List_1_t6D0A10F47F3440798295D2FFFC6D016477AF38E5 * __this, int32_t ___index0, GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * ___item1, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_t6D0A10F47F3440798295D2FFFC6D016477AF38E5 *, int32_t, GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 *, const RuntimeMethod*))List_1_Insert_mFC500A19C486C8ED4E9F3BDBA9B079602D647741_gshared)(__this, ___index0, ___item1, method);
+}
 // System.Void System.Collections.Generic.List`1<UnityEngine.GameObject>::Add(!0)
 inline void List_1_Add_m3DD76DE838FA83DF972E0486A296345EB3A7DDF3 (List_1_t6D0A10F47F3440798295D2FFFC6D016477AF38E5 * __this, GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * ___item0, const RuntimeMethod* method)
 {
@@ -26350,8 +26366,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SkewTextExample__ctor_m945059906734DD38C
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpriteMovingBelt_Start_m2AC1FBCA51253E22BA5B850358B7807C4786101D (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, const RuntimeMethod* method)
 {
 	{
-		// SpawnSprite();
-		SpriteMovingBelt_SpawnSprite_m7180E798079FB265E19DDDF33693CD0F12199370(__this, /*hidden argument*/NULL);
+		// MakeInitialSpawning();
+		SpriteMovingBelt_MakeInitialSpawning_m92F32643EB29449ECFFCEEA8BD873406FCD199E6(__this, /*hidden argument*/NULL);
 		// }
 		return;
 	}
@@ -26490,23 +26506,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90
 // System.Boolean SpriteMovingBelt::CanDestroy(UnityEngine.GameObject)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SpriteMovingBelt_CanDestroy_m64B75F668C75A850D6C5D66C787DC0C08E5E05E3 (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * ___i0, const RuntimeMethod* method)
 {
-	Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  V_0;
-	memset((&V_0), 0, sizeof(V_0));
 	{
 		// Vector3 screenSize = GetScreenSize();
-		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_0 = SpriteMovingBelt_GetScreenSize_m3C83EAD1D749E694ED72ABE3B94FE0DD66F24164(__this, /*hidden argument*/NULL);
-		V_0 = L_0;
-		// return i.transform.position.x < -(screenSize.x + destroyOffsetFromScreen);
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_1 = ___i0;
+		SpriteMovingBelt_GetScreenSize_m3C83EAD1D749E694ED72ABE3B94FE0DD66F24164(__this, /*hidden argument*/NULL);
+		// return i.transform.position.x < GetDestroyX();
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_0 = ___i0;
+		NullCheck(L_0);
+		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_1 = GameObject_get_transform_m16A80BB92B6C8C5AB696E447014D45EDF1E4DE34(L_0, /*hidden argument*/NULL);
 		NullCheck(L_1);
-		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_2 = GameObject_get_transform_m16A80BB92B6C8C5AB696E447014D45EDF1E4DE34(L_1, /*hidden argument*/NULL);
-		NullCheck(L_2);
-		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_3 = Transform_get_position_m40A8A9895568D56FFC687B57F30E8D53CB5EA341(L_2, /*hidden argument*/NULL);
-		float L_4 = L_3.get_x_2();
-		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_5 = V_0;
-		float L_6 = L_5.get_x_2();
-		float L_7 = __this->get_destroyOffsetFromScreen_7();
-		return (bool)((((float)L_4) < ((float)((-((float)il2cpp_codegen_add((float)L_6, (float)L_7))))))? 1 : 0);
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_2 = Transform_get_position_m40A8A9895568D56FFC687B57F30E8D53CB5EA341(L_1, /*hidden argument*/NULL);
+		float L_3 = L_2.get_x_2();
+		float L_4 = SpriteMovingBelt_GetDestroyX_mBEDA9858F57FBC9B737C5C190DC96E5D5B1FB2BA(__this, /*hidden argument*/NULL);
+		return (bool)((((float)L_3) < ((float)L_4))? 1 : 0);
 	}
 }
 // System.Void SpriteMovingBelt::SpawnIfNeeded()
@@ -26540,33 +26551,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpriteMovingBelt_SpawnIfNeeded_mA69F3D86
 		float L_9 = __this->get_spawnDistance_8();
 		if ((!(((float)((float)il2cpp_codegen_subtract((float)L_4, (float)L_8))) >= ((float)L_9))))
 		{
-			goto IL_0060;
+			goto IL_0045;
 		}
 	}
 	{
-		// bool canSpawn = Random.Range(0f, 1f) < spawnProbability;
-		float L_10 = Random_Range_mC15372D42A9ABDCAC3DE82E114D60A40C9C311D2((0.0f), (1.0f), /*hidden argument*/NULL);
-		float L_11 = __this->get_spawnProbability_9();
-		// if (canSpawn)
-		if (!((((float)L_10) < ((float)L_11))? 1 : 0))
-		{
-			goto IL_0059;
-		}
-	}
-	{
-		// SpawnSprite();
-		SpriteMovingBelt_SpawnSprite_m7180E798079FB265E19DDDF33693CD0F12199370(__this, /*hidden argument*/NULL);
-		// } else
-		return;
+		// SpawnWithProbability(GetDefaultStartPos());
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_10 = SpriteMovingBelt_GetDefaultStartPos_mBFF24A26837BF9962211C979C4F682DFE583BA17(__this, /*hidden argument*/NULL);
+		SpriteMovingBelt_SpawnWithProbability_m2DBA4C4FE1AA201D839B18D37D13C9D70C505A18(__this, L_10, /*hidden argument*/NULL);
 	}
 
-IL_0059:
-	{
-		// SpawnSpriteAndHide();
-		SpriteMovingBelt_SpawnSpriteAndHide_m739CDCCB84B0517ED920C6739CB498B01A4EDF0C(__this, /*hidden argument*/NULL);
-	}
-
-IL_0060:
+IL_0045:
 	{
 		// }
 		return;
@@ -26583,20 +26577,133 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float SpriteMovingBelt_GetSpawnX_m98C593A8A2F
 		return ((float)il2cpp_codegen_add((float)L_1, (float)L_2));
 	}
 }
-// UnityEngine.GameObject SpriteMovingBelt::SpawnSprite()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * SpriteMovingBelt_SpawnSprite_m7180E798079FB265E19DDDF33693CD0F12199370 (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, const RuntimeMethod* method)
+// System.Single SpriteMovingBelt::GetDestroyX()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float SpriteMovingBelt_GetDestroyX_mBEDA9858F57FBC9B737C5C190DC96E5D5B1FB2BA (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, const RuntimeMethod* method)
+{
+	{
+		// return -(GetScreenSize().x + destroyOffsetFromScreen);
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_0 = SpriteMovingBelt_GetScreenSize_m3C83EAD1D749E694ED72ABE3B94FE0DD66F24164(__this, /*hidden argument*/NULL);
+		float L_1 = L_0.get_x_2();
+		float L_2 = __this->get_destroyOffsetFromScreen_7();
+		return ((-((float)il2cpp_codegen_add((float)L_1, (float)L_2))));
+	}
+}
+// UnityEngine.GameObject SpriteMovingBelt::SpawnWithProbability(UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * SpriteMovingBelt_SpawnWithProbability_m2DBA4C4FE1AA201D839B18D37D13C9D70C505A18 (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___startPos0, const RuntimeMethod* method)
+{
+	{
+		// bool canSpawn = Random.Range(0f, 1f) < spawnProbability;
+		float L_0 = Random_Range_mC15372D42A9ABDCAC3DE82E114D60A40C9C311D2((0.0f), (1.0f), /*hidden argument*/NULL);
+		float L_1 = __this->get_spawnProbability_9();
+		// if (canSpawn)
+		if (!((((float)L_0) < ((float)L_1))? 1 : 0))
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		// return SpawnSprite(startPos);
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_2 = ___startPos0;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_3 = SpriteMovingBelt_SpawnSprite_m11181E88B41FE78249A38B0F979CAB56614B13D3(__this, L_2, (bool)0, /*hidden argument*/NULL);
+		return L_3;
+	}
+
+IL_0022:
+	{
+		// return SpawnSpriteAndHide(startPos);
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_4 = ___startPos0;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_5 = SpriteMovingBelt_SpawnSpriteAndHide_m16D4A7345456CC5B3658CF44B5D01AB34D49968F(__this, L_4, /*hidden argument*/NULL);
+		return L_5;
+	}
+}
+// UnityEngine.GameObject SpriteMovingBelt::SpawnSprite(UnityEngine.Vector3,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * SpriteMovingBelt_SpawnSprite_m11181E88B41FE78249A38B0F979CAB56614B13D3 (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___startPos0, bool ___addToFront1, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (SpriteMovingBelt_SpawnSprite_m7180E798079FB265E19DDDF33693CD0F12199370_MetadataUsageId);
+		il2cpp_codegen_initialize_method (SpriteMovingBelt_SpawnSprite_m11181E88B41FE78249A38B0F979CAB56614B13D3_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  V_0;
-	memset((&V_0), 0, sizeof(V_0));
-	GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * V_1 = NULL;
+	GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * V_0 = NULL;
 	{
-		// Vector3 startPos = new Vector3(
+		// GameObject instance = Instantiate<GameObject>(sprite, startPos, Quaternion.identity);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_0 = __this->get_sprite_4();
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_1 = ___startPos0;
+		IL2CPP_RUNTIME_CLASS_INIT(Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4_il2cpp_TypeInfo_var);
+		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_2 = Quaternion_get_identity_mF2E565DBCE793A1AE6208056D42CA7C59D83A702(/*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_3 = Object_Instantiate_TisGameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319_m81B599A0051F8F4543E5C73A11585E96E940943B(L_0, L_1, L_2, /*hidden argument*/Object_Instantiate_TisGameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319_m81B599A0051F8F4543E5C73A11585E96E940943B_RuntimeMethod_var);
+		V_0 = L_3;
+		// if (addToFront)
+		bool L_4 = ___addToFront1;
+		if (!L_4)
+		{
+			goto IL_0024;
+		}
+	}
+	{
+		// instances.Insert(0, instance);
+		List_1_t6D0A10F47F3440798295D2FFFC6D016477AF38E5 * L_5 = __this->get_instances_10();
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_6 = V_0;
+		NullCheck(L_5);
+		List_1_Insert_m20E1169E78F3FA265DF56593B41EA0F271A990F8(L_5, 0, L_6, /*hidden argument*/List_1_Insert_m20E1169E78F3FA265DF56593B41EA0F271A990F8_RuntimeMethod_var);
+		// } else
+		goto IL_0030;
+	}
+
+IL_0024:
+	{
+		// instances.Add(instance);
+		List_1_t6D0A10F47F3440798295D2FFFC6D016477AF38E5 * L_7 = __this->get_instances_10();
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_8 = V_0;
+		NullCheck(L_7);
+		List_1_Add_m3DD76DE838FA83DF972E0486A296345EB3A7DDF3(L_7, L_8, /*hidden argument*/List_1_Add_m3DD76DE838FA83DF972E0486A296345EB3A7DDF3_RuntimeMethod_var);
+	}
+
+IL_0030:
+	{
+		// return instance;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_9 = V_0;
+		return L_9;
+	}
+}
+// UnityEngine.GameObject SpriteMovingBelt::SpawnSpriteAndHide(UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * SpriteMovingBelt_SpawnSpriteAndHide_m16D4A7345456CC5B3658CF44B5D01AB34D49968F (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___startPos0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (SpriteMovingBelt_SpawnSpriteAndHide_m16D4A7345456CC5B3658CF44B5D01AB34D49968F_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * V_0 = NULL;
+	{
+		// startPos.y = 10;
+		(&___startPos0)->set_y_3((10.0f));
+		// GameObject instance = Instantiate<GameObject>(sprite, startPos, Quaternion.identity);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_0 = __this->get_sprite_4();
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_1 = ___startPos0;
+		IL2CPP_RUNTIME_CLASS_INIT(Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4_il2cpp_TypeInfo_var);
+		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_2 = Quaternion_get_identity_mF2E565DBCE793A1AE6208056D42CA7C59D83A702(/*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_3 = Object_Instantiate_TisGameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319_m81B599A0051F8F4543E5C73A11585E96E940943B(L_0, L_1, L_2, /*hidden argument*/Object_Instantiate_TisGameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319_m81B599A0051F8F4543E5C73A11585E96E940943B_RuntimeMethod_var);
+		V_0 = L_3;
+		// instances.Add(instance);
+		List_1_t6D0A10F47F3440798295D2FFFC6D016477AF38E5 * L_4 = __this->get_instances_10();
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_5 = V_0;
+		NullCheck(L_4);
+		List_1_Add_m3DD76DE838FA83DF972E0486A296345EB3A7DDF3(L_4, L_5, /*hidden argument*/List_1_Add_m3DD76DE838FA83DF972E0486A296345EB3A7DDF3_RuntimeMethod_var);
+		// return instance;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_6 = V_0;
+		return L_6;
+	}
+}
+// UnityEngine.Vector3 SpriteMovingBelt::GetDefaultStartPos()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  SpriteMovingBelt_GetDefaultStartPos_mBFF24A26837BF9962211C979C4F682DFE583BA17 (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, const RuntimeMethod* method)
+{
+	{
+		// return new Vector3(
 		//     GetSpawnX(),
 		//     gameObject.transform.position.y,
 		//     gameObject.transform.position.z
@@ -26614,67 +26721,51 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tC000A2E1A7CF1E10FD7BA08863287C072
 		NullCheck(L_6);
 		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_7 = Transform_get_position_m40A8A9895568D56FFC687B57F30E8D53CB5EA341(L_6, /*hidden argument*/NULL);
 		float L_8 = L_7.get_z_4();
-		Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline((Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E *)(&V_0), L_0, L_4, L_8, /*hidden argument*/NULL);
-		// GameObject instance = Instantiate<GameObject>(sprite, startPos, Quaternion.identity);
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_9 = __this->get_sprite_4();
-		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_10 = V_0;
-		IL2CPP_RUNTIME_CLASS_INIT(Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4_il2cpp_TypeInfo_var);
-		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_11 = Quaternion_get_identity_mF2E565DBCE793A1AE6208056D42CA7C59D83A702(/*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_12 = Object_Instantiate_TisGameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319_m81B599A0051F8F4543E5C73A11585E96E940943B(L_9, L_10, L_11, /*hidden argument*/Object_Instantiate_TisGameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319_m81B599A0051F8F4543E5C73A11585E96E940943B_RuntimeMethod_var);
-		V_1 = L_12;
-		// instances.Add(instance);
-		List_1_t6D0A10F47F3440798295D2FFFC6D016477AF38E5 * L_13 = __this->get_instances_10();
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_14 = V_1;
-		NullCheck(L_13);
-		List_1_Add_m3DD76DE838FA83DF972E0486A296345EB3A7DDF3(L_13, L_14, /*hidden argument*/List_1_Add_m3DD76DE838FA83DF972E0486A296345EB3A7DDF3_RuntimeMethod_var);
-		// return instance;
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_15 = V_1;
-		return L_15;
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_9;
+		memset((&L_9), 0, sizeof(L_9));
+		Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline((&L_9), L_0, L_4, L_8, /*hidden argument*/NULL);
+		return L_9;
 	}
 }
-// UnityEngine.GameObject SpriteMovingBelt::SpawnSpriteAndHide()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * SpriteMovingBelt_SpawnSpriteAndHide_m739CDCCB84B0517ED920C6739CB498B01A4EDF0C (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, const RuntimeMethod* method)
+// System.Void SpriteMovingBelt::MakeInitialSpawning()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpriteMovingBelt_MakeInitialSpawning_m92F32643EB29449ECFFCEEA8BD873406FCD199E6 (SpriteMovingBelt_t9589256512331D49247F7938D6E56533C1520273 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (SpriteMovingBelt_SpawnSpriteAndHide_m739CDCCB84B0517ED920C6739CB498B01A4EDF0C_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
 	Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * V_1 = NULL;
 	{
-		// Vector3 startPos = new Vector3(
-		//     GetSpawnX(),
-		//     10,
-		//     gameObject.transform.position.z
-		// );
-		float L_0 = SpriteMovingBelt_GetSpawnX_m98C593A8A2F7C1BCCBD9D6645B18DD4D2CAC3546(__this, /*hidden argument*/NULL);
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_1 = Component_get_gameObject_m55DC35B149AFB9157582755383BA954655FE0C5B(__this, /*hidden argument*/NULL);
-		NullCheck(L_1);
-		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_2 = GameObject_get_transform_m16A80BB92B6C8C5AB696E447014D45EDF1E4DE34(L_1, /*hidden argument*/NULL);
-		NullCheck(L_2);
-		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_3 = Transform_get_position_m40A8A9895568D56FFC687B57F30E8D53CB5EA341(L_2, /*hidden argument*/NULL);
-		float L_4 = L_3.get_z_4();
-		Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline((Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E *)(&V_0), L_0, (10.0f), L_4, /*hidden argument*/NULL);
-		// GameObject instance = Instantiate<GameObject>(sprite, startPos, Quaternion.identity);
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_5 = __this->get_sprite_4();
+		// Vector3 startPos = GetDefaultStartPos();
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_0 = SpriteMovingBelt_GetDefaultStartPos_mBFF24A26837BF9962211C979C4F682DFE583BA17(__this, /*hidden argument*/NULL);
+		V_0 = L_0;
+		goto IL_0023;
+	}
+
+IL_0009:
+	{
+		// SpawnSprite(startPos, addToFront:true);
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_1 = V_0;
+		SpriteMovingBelt_SpawnSprite_m11181E88B41FE78249A38B0F979CAB56614B13D3(__this, L_1, (bool)1, /*hidden argument*/NULL);
+		// startPos.x -= spawnDistance;
+		float* L_2 = (&V_0)->get_address_of_x_2();
+		float* L_3 = L_2;
+		float L_4 = *((float*)L_3);
+		float L_5 = __this->get_spawnDistance_8();
+		*((float*)L_3) = (float)((float)il2cpp_codegen_subtract((float)L_4, (float)L_5));
+	}
+
+IL_0023:
+	{
+		// while(startPos.x > GetDestroyX())
 		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_6 = V_0;
-		IL2CPP_RUNTIME_CLASS_INIT(Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4_il2cpp_TypeInfo_var);
-		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_7 = Quaternion_get_identity_mF2E565DBCE793A1AE6208056D42CA7C59D83A702(/*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_8 = Object_Instantiate_TisGameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319_m81B599A0051F8F4543E5C73A11585E96E940943B(L_5, L_6, L_7, /*hidden argument*/Object_Instantiate_TisGameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319_m81B599A0051F8F4543E5C73A11585E96E940943B_RuntimeMethod_var);
-		V_1 = L_8;
-		// instances.Add(instance);
-		List_1_t6D0A10F47F3440798295D2FFFC6D016477AF38E5 * L_9 = __this->get_instances_10();
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_10 = V_1;
-		NullCheck(L_9);
-		List_1_Add_m3DD76DE838FA83DF972E0486A296345EB3A7DDF3(L_9, L_10, /*hidden argument*/List_1_Add_m3DD76DE838FA83DF972E0486A296345EB3A7DDF3_RuntimeMethod_var);
-		// return instance;
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_11 = V_1;
-		return L_11;
+		float L_7 = L_6.get_x_2();
+		float L_8 = SpriteMovingBelt_GetDestroyX_mBEDA9858F57FBC9B737C5C190DC96E5D5B1FB2BA(__this, /*hidden argument*/NULL);
+		if ((((float)L_7) > ((float)L_8)))
+		{
+			goto IL_0009;
+		}
+	}
+	{
+		// }
+		return;
 	}
 }
 // System.Void SpriteMovingBelt::.ctor()

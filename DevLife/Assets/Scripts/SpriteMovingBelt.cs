@@ -16,7 +16,7 @@ public class SpriteMovingBelt : MonoBehaviour
     void Start()
     {
         // Create the instance
-        SpawnSprite();
+        MakeInitialSpawning();
     }
 
     void Update()
@@ -51,7 +51,7 @@ public class SpriteMovingBelt : MonoBehaviour
     private bool CanDestroy(GameObject i)
     {
         Vector3 screenSize = GetScreenSize();
-        return i.transform.position.x < -(screenSize.x + destroyOffsetFromScreen);
+        return i.transform.position.x < GetDestroyX();
     }
 
     private void SpawnIfNeeded()
@@ -61,14 +61,7 @@ public class SpriteMovingBelt : MonoBehaviour
 
         if (diff >= spawnDistance)
         {
-            bool canSpawn = Random.Range(0f, 1f) < spawnProbability;
-            if (canSpawn)
-            {
-                SpawnSprite();
-            } else
-            {
-                SpawnSpriteAndHide();
-            }
+            SpawnWithProbability(GetDefaultStartPos());
         }
     }
 
@@ -77,29 +70,62 @@ public class SpriteMovingBelt : MonoBehaviour
         return GetScreenSize().x + spawnOffsetFromScreen;
     }
 
-    private GameObject SpawnSprite()
+    private float GetDestroyX()
     {
-        Vector3 startPos = new Vector3(
-            GetSpawnX(),
-            gameObject.transform.position.y,
-            gameObject.transform.position.z
-        );
+        return -(GetScreenSize().x + destroyOffsetFromScreen);
+    }
+
+    private GameObject SpawnWithProbability(Vector3 startPos)
+    {
+        bool canSpawn = Random.Range(0f, 1f) < spawnProbability;
+        if (canSpawn)
+        {
+            return SpawnSprite(startPos);
+        }
+
+        return SpawnSpriteAndHide(startPos);
+    }
+
+    private GameObject SpawnSprite(Vector3 startPos, bool addToFront = false)
+    {
+        GameObject instance = Instantiate<GameObject>(sprite, startPos, Quaternion.identity);
+
+        if (addToFront)
+        {
+            instances.Insert(0, instance);
+        } else
+        {
+            instances.Add(instance);
+        }
+
+        return instance;
+    }
+
+    private GameObject SpawnSpriteAndHide(Vector3 startPos)
+    {
+        startPos.y = 10;
         GameObject instance = Instantiate<GameObject>(sprite, startPos, Quaternion.identity);
         instances.Add(instance);
 
         return instance;
     }
 
-    private GameObject SpawnSpriteAndHide()
+    private Vector3 GetDefaultStartPos()
     {
-        Vector3 startPos = new Vector3(
+        return new Vector3(
             GetSpawnX(),
-            10,
+            gameObject.transform.position.y,
             gameObject.transform.position.z
         );
-        GameObject instance = Instantiate<GameObject>(sprite, startPos, Quaternion.identity);
-        instances.Add(instance);
+    }
 
-        return instance;
+    private void MakeInitialSpawning()
+    {
+        Vector3 startPos = GetDefaultStartPos();
+        while(startPos.x > GetDestroyX())
+        {
+            SpawnSprite(startPos, addToFront:true);
+            startPos.x -= spawnDistance;
+        }
     }
 }

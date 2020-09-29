@@ -475,9 +475,9 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Grid",
-            "fullManagedTypeName": "UnityEngine.Grid",
-            "moduleName": "Grid",
+            "nativeClass": "SortingGroup",
+            "fullManagedTypeName": "UnityEngine.Rendering.SortingGroup",
+            "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Game.unity"
             ]
@@ -529,36 +529,9 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "GridLayout",
-            "fullManagedTypeName": "UnityEngine.GridLayout",
-            "moduleName": "Grid",
-            "usedInScenes": [
-                "Assets/Scenes/Game.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Tilemap",
-            "fullManagedTypeName": "UnityEngine.Tilemaps.Tilemap",
-            "moduleName": "Tilemap",
-            "usedInScenes": [
-                "Assets/Scenes/Game.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Collider2D",
             "fullManagedTypeName": "UnityEngine.Collider2D",
             "moduleName": "Physics2D",
-            "usedInScenes": [
-                "Assets/Scenes/Game.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "TilemapRenderer",
-            "fullManagedTypeName": "UnityEngine.Tilemaps.TilemapRenderer",
-            "moduleName": "Tilemap",
             "usedInScenes": [
                 "Assets/Scenes/Game.unity"
             ]
@@ -588,13 +561,6 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "GameDev",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Assembly-CSharp.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "MovingItem",
             "moduleName": "",
             "usedInScenes": []
         },

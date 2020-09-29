@@ -40,23 +40,19 @@
 		<type fullname="UnityEngine.Motion" preserve="nothing"/>
 		<type fullname="UnityEngine.CanvasRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.LightmapSettings" preserve="nothing"/>
-		<type fullname="UnityEngine.Grid" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.SortingGroup" preserve="nothing"/>
 		<type fullname="UnityEngine.Rigidbody2D" preserve="nothing"/>
 		<type fullname="UnityEngine.BoxCollider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.ParticleSystemRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.ParticleSystem" preserve="nothing"/>
 		<type fullname="UnityEngine.Mesh" preserve="nothing"/>
-		<type fullname="UnityEngine.GridLayout" preserve="nothing"/>
-		<type fullname="UnityEngine.Tilemaps.Tilemap" preserve="nothing"/>
 		<type fullname="UnityEngine.Collider2D" preserve="nothing"/>
-		<type fullname="UnityEngine.Tilemaps.TilemapRenderer" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="DevLifeActions" preserve="nothing"/>
 		<type fullname="Drop" preserve="nothing"/>
 		<type fullname="GameConfig" preserve="nothing"/>
 		<type fullname="GameDev" preserve="nothing"/>
-		<type fullname="MovingItem" preserve="nothing"/>
 		<type fullname="SpriteMovingBelt" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.TextMeshPro">

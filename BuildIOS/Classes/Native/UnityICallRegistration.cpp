@@ -2168,22 +2168,6 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.Texture3D
 
-	//Start Registrations for type : UnityEngine.Tilemaps.Tilemap
-
-		//System.Void UnityEngine.Tilemaps.Tilemap::RefreshTile_Injected(UnityEngine.Vector3Int&)
-		void Register_UnityEngine_Tilemaps_Tilemap_RefreshTile_Injected();
-		Register_UnityEngine_Tilemaps_Tilemap_RefreshTile_Injected();
-
-	//End Registrations for type : UnityEngine.Tilemaps.Tilemap
-
-	//Start Registrations for type : UnityEngine.Tilemaps.TilemapRenderer
-
-		//System.Void UnityEngine.Tilemaps.TilemapRenderer::OnSpriteAtlasRegistered(UnityEngine.U2D.SpriteAtlas)
-		void Register_UnityEngine_Tilemaps_TilemapRenderer_OnSpriteAtlasRegistered();
-		Register_UnityEngine_Tilemaps_TilemapRenderer_OnSpriteAtlasRegistered();
-
-	//End Registrations for type : UnityEngine.Tilemaps.TilemapRenderer
-
 	//Start Registrations for type : UnityEngine.Time
 
 		//System.Single UnityEngine.Time::get_deltaTime()
