@@ -1060,6 +1060,166 @@ public:
 };
 
 
+// UnityEngine.PlayerLoop.PostLateUpdate_UpdateAllRenderers
+struct  UpdateAllRenderers_t96FC2DF53BC1D90C7E40E2CAD10B8C674A94B86C 
+{
+public:
+	union
+	{
+		struct
+		{
+		};
+		uint8_t UpdateAllRenderers_t96FC2DF53BC1D90C7E40E2CAD10B8C674A94B86C__padding[1];
+	};
+
+public:
+};
+
+
+// UnityEngine.PlayerLoop.PostLateUpdate_UpdateAllSkinnedMeshes
+struct  UpdateAllSkinnedMeshes_tC6792E38655DE2113814AC6A642B3D937D6640F6 
+{
+public:
+	union
+	{
+		struct
+		{
+		};
+		uint8_t UpdateAllSkinnedMeshes_tC6792E38655DE2113814AC6A642B3D937D6640F6__padding[1];
+	};
+
+public:
+};
+
+
+// UnityEngine.PlayerLoop.PostLateUpdate_UpdateAudio
+struct  UpdateAudio_t87394777AB6FE384B45C0C013722C1F68A60CF58 
+{
+public:
+	union
+	{
+		struct
+		{
+		};
+		uint8_t UpdateAudio_t87394777AB6FE384B45C0C013722C1F68A60CF58__padding[1];
+	};
+
+public:
+};
+
+
+// UnityEngine.PlayerLoop.PostLateUpdate_UpdateCanvasRectTransform
+struct  UpdateCanvasRectTransform_t4E5EA2B18FCFD686E1F2052517657E391709422A 
+{
+public:
+	union
+	{
+		struct
+		{
+		};
+		uint8_t UpdateCanvasRectTransform_t4E5EA2B18FCFD686E1F2052517657E391709422A__padding[1];
+	};
+
+public:
+};
+
+
+// UnityEngine.PlayerLoop.PostLateUpdate_UpdateCaptureScreenshot
+struct  UpdateCaptureScreenshot_t4FC86A971BE4E341EE83B9BCF72D3642CB67E483 
+{
+public:
+	union
+	{
+		struct
+		{
+		};
+		uint8_t UpdateCaptureScreenshot_t4FC86A971BE4E341EE83B9BCF72D3642CB67E483__padding[1];
+	};
+
+public:
+};
+
+
+// UnityEngine.PlayerLoop.PostLateUpdate_UpdateCustomRenderTextures
+struct  UpdateCustomRenderTextures_t52B541FA5A7354ED440E274C6E357EBAA3F4C031 
+{
+public:
+	union
+	{
+		struct
+		{
+		};
+		uint8_t UpdateCustomRenderTextures_t52B541FA5A7354ED440E274C6E357EBAA3F4C031__padding[1];
+	};
+
+public:
+};
+
+
+// UnityEngine.PlayerLoop.PostLateUpdate_UpdateLightProbeProxyVolumes
+struct  UpdateLightProbeProxyVolumes_t42C724BC635B9701939388DCB63A3FF0E882EA3E 
+{
+public:
+	union
+	{
+		struct
+		{
+		};
+		uint8_t UpdateLightProbeProxyVolumes_t42C724BC635B9701939388DCB63A3FF0E882EA3E__padding[1];
+	};
+
+public:
+};
+
+
+// UnityEngine.PlayerLoop.PostLateUpdate_UpdateRectTransform
+struct  UpdateRectTransform_t6290D8B6BF5E990B5F706FE60B4A5CD954D72F13 
+{
+public:
+	union
+	{
+		struct
+		{
+		};
+		uint8_t UpdateRectTransform_t6290D8B6BF5E990B5F706FE60B4A5CD954D72F13__padding[1];
+	};
+
+public:
+};
+
+
+// UnityEngine.PlayerLoop.PostLateUpdate_UpdateResolution
+struct  UpdateResolution_t8394E04EF0F5C04C0C65B1DF23F0E3E700144B45 
+{
+public:
+	union
+	{
+		struct
+		{
+		};
+		uint8_t UpdateResolution_t8394E04EF0F5C04C0C65B1DF23F0E3E700144B45__padding[1];
+	};
+
+public:
+};
+
+
+// UnityEngine.PlayerLoop.PostLateUpdate_UpdateSubstance
+struct  UpdateSubstance_tC6E01D9640025CD7D0B09D636C02172D22F66967 
+{
+public:
+	union
+	{
+		struct
+		{
+		};
+		uint8_t UpdateSubstance_tC6E01D9640025CD7D0B09D636C02172D22F66967__padding[1];
+	};
+
+public:
+};
+
+
 // UnityEngine.PlayerLoop.PostLateUpdate_UpdateVideo
 struct  UpdateVideo_t1E34A645DFD2C4E5243980D958392F6969F3D064 
 {
@@ -2469,6 +2629,86 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogException_m1BE957624F4DD291B1B4
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool EventWaitHandle_Set_m81764C887F38A1153224557B26CD688B59987B38 (EventWaitHandle_t80CDEB33529EF7549E7D3E3B689D8272B9F37F3C * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.UnitySynchronizationContext/WorkRequest::Invoke()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WorkRequest_Invoke_m1C292B7297918C5F2DBE70971895FE8D5C33AA20 (WorkRequest_tA19FD4D1269D8EE2EA886AAF036C4F7F09154393 * __this, const RuntimeMethod* method);
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"

@@ -567,7 +567,7 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "SpriteMovingBelt",
+            "fullManagedTypeName": "InfiniteMovingBelt",
             "moduleName": "",
             "usedInScenes": []
         },

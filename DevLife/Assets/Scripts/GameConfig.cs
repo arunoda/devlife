@@ -15,7 +15,10 @@ public class GameConfig : MonoBehaviour
     public Text labelTimeLeft;
     public Text labelTotalTasksCompleted;
     public Text playPauseButton;
+    public Text labelHighScore;
+    public GameObject animationNewHighScore;
     public GameObject gameOverPanel;
+    public GameObject gameOverParticles;
 
     public enum DropType
     {
@@ -144,11 +147,7 @@ public class GameConfig : MonoBehaviour
 
         }
 
-        EnsureResume();
-        gameOver = true;
-        labelTotalTasksCompleted.text = GetTasksCompleted().ToString();
-        gameOverPanel.SetActive(true);
-        StopCoroutine(spawnDropsHandler);
+        EndGame();
     }
 
     public void Freeze()
@@ -262,5 +261,37 @@ public class GameConfig : MonoBehaviour
     {
         Time.timeScale = 1f;
         playPauseButton.text = "Pause";
+    }
+
+    private void EndGame()
+    {
+        UnFreeze();
+        EnsureResume();
+
+        gameOver = true;
+        int completedTasks = GetTasksCompleted();
+
+        // Manage Highscore
+        int highScore = PlayerPrefs.GetInt("HighScore", 0);
+        bool gotNewHighScore = completedTasks > highScore;
+        if (gotNewHighScore)
+        {
+            highScore = completedTasks;
+            PlayerPrefs.SetInt("HighScore", highScore);
+            animationNewHighScore.SetActive(true);
+        }
+
+        labelHighScore.text = string.Format("( High Score: {0} )", highScore);
+        labelTotalTasksCompleted.text = completedTasks.ToString();
+
+        StopCoroutine(spawnDropsHandler);
+        StartCoroutine(ShowEndScreen());
+    }
+
+    IEnumerator ShowEndScreen()
+    {
+        gameOverParticles.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        gameOverPanel.SetActive(true);
     }
 }
