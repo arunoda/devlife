@@ -753,7 +753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc3affadc6244fdaa0bd8f1491b0082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 8550724513001341973, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
+  item: {fileID: 8550724513001341973, guid: 2d204b2e4128948b1bfa31b835ccdb4f, type: 3}
   speed: -1
   spawnOffsetFromScreen: 0
   destroyOffsetFromScreen: 1
@@ -1578,12 +1578,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc3affadc6244fdaa0bd8f1491b0082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 2548011083886298712, guid: a2889630e0aba48c0823158f214769eb, type: 3}
+  item: {fileID: 2548011083886298712, guid: a2889630e0aba48c0823158f214769eb, type: 3}
   speed: -1
   spawnOffsetFromScreen: 2
   destroyOffsetFromScreen: 2
   spawnDistance: 18
-  spawnProbability: 0.8
+  spawnProbability: 1
 --- !u!4 &1644726880
 Transform:
   m_ObjectHideFlags: 0
@@ -2147,7 +2147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc3affadc6244fdaa0bd8f1491b0082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 1626560253415712234, guid: a3770c9a5c04f4a7f9324f7c6b0b73d7, type: 3}
+  item: {fileID: 1626560253415712234, guid: a3770c9a5c04f4a7f9324f7c6b0b73d7, type: 3}
   speed: -1
   spawnOffsetFromScreen: 2
   destroyOffsetFromScreen: 2

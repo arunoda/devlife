@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpriteMovingBelt : MonoBehaviour
+public class InfiniteMovingBelt : MonoBehaviour
 {
-    public GameObject sprite;
+    public GameObject item;
     public float speed = -1f;
     public float spawnOffsetFromScreen = 1f;
     public float destroyOffsetFromScreen = 1f;
@@ -80,15 +80,15 @@ public class SpriteMovingBelt : MonoBehaviour
         bool canSpawn = Random.Range(0f, 1f) < spawnProbability;
         if (canSpawn)
         {
-            return SpawnSprite(startPos);
+            return SpawnItem(startPos);
         }
 
-        return SpawnSpriteAndHide(startPos);
+        return SpawnItemAndHide(startPos);
     }
 
-    private GameObject SpawnSprite(Vector3 startPos, bool addToFront = false)
+    private GameObject SpawnItem(Vector3 startPos, bool addToFront = false)
     {
-        GameObject instance = Instantiate<GameObject>(sprite, startPos, Quaternion.identity);
+        GameObject instance = Instantiate<GameObject>(item, startPos, Quaternion.identity);
 
         if (addToFront)
         {
@@ -101,10 +101,10 @@ public class SpriteMovingBelt : MonoBehaviour
         return instance;
     }
 
-    private GameObject SpawnSpriteAndHide(Vector3 startPos)
+    private GameObject SpawnItemAndHide(Vector3 startPos)
     {
         startPos.y = 10;
-        GameObject instance = Instantiate<GameObject>(sprite, startPos, Quaternion.identity);
+        GameObject instance = Instantiate<GameObject>(item, startPos, Quaternion.identity);
         instances.Add(instance);
 
         return instance;
@@ -124,7 +124,7 @@ public class SpriteMovingBelt : MonoBehaviour
         Vector3 startPos = GetDefaultStartPos();
         while(startPos.x > GetDestroyX())
         {
-            SpawnSprite(startPos, addToFront:true);
+            SpawnItem(startPos, addToFront:true);
             startPos.x -= spawnDistance;
         }
     }
