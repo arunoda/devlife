@@ -278,6 +278,7 @@ public class GameConfig : MonoBehaviour
         {
             highScore = completedTasks;
             PlayerPrefs.SetInt("HighScore", highScore);
+            PlayerPrefs.Save();
             animationNewHighScore.SetActive(true);
         }
 

@@ -45,9 +45,9 @@ public class Drop : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other)
-    {
+    {                                              
         // This prevent hitting a freezed drop on the floor.
-        if (GameConfig.current.IsFreezed()) return;
+        if (causedFreezing) return;
         
         if (other.CompareTag("Floor"))
         {
