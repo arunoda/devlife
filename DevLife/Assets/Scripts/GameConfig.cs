@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,11 +28,13 @@ public class GameConfig : MonoBehaviour
         STACKOVERFLOW
     };
 
+    private string sessionId;
     private int gameTime = 60;
     private float devSpeed = 10;
     private float dropSpeed = 5;
     private float walkSpeed = 1;
     private int noOfDropsInScreen = 2;
+    private EventsManager eventsManager;
 
     // point system
     private int twitterHits = 0;
@@ -52,6 +55,8 @@ public class GameConfig : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sessionId = System.Guid.NewGuid().ToString();
+        eventsManager = new EventsManager(sessionId);
         mainCamera = Camera.main;
         GameConfig.current = this;
 
@@ -59,6 +64,9 @@ public class GameConfig : MonoBehaviour
         StartCoroutine(nameof(GameTimer));
         UnFreeze();
         gameOverPanel.SetActive(false);
+
+        eventsManager.Login("test-user");
+        eventsManager.StartLevel(1);
     }
 
     // Update is called once per frame
@@ -157,6 +165,8 @@ public class GameConfig : MonoBehaviour
             return;
         }
 
+        eventsManager.AddEvent("freeze");
+
         freezed = true;
         freezeHandlers?.Invoke(true);
         StopCoroutine(spawnDropsHandler);
@@ -177,6 +187,8 @@ public class GameConfig : MonoBehaviour
         {
             return;
         }
+
+        eventsManager.AddEvent("unfreeze");
 
         freezed = false;
         freezeHandlers?.Invoke(false);
@@ -216,9 +228,22 @@ public class GameConfig : MonoBehaviour
         return devSpeed;
     }
 
-    public void NotifyHit(DropType type)
+    public void NotifyHitOnFloor(DropType type, int dropId)
     {
-        switch(type)
+        eventsManager.AddEvent("hitOnFloor", new Dictionary<string, object>() {
+            { "hitType", type },
+            { "dropId", dropId }
+        });
+    }
+
+    public void NotifyHit(DropType type, int dropId)
+    {
+        eventsManager.AddEvent("hit", new Dictionary<string, object>() {
+            { "hitType", type },
+            { "dropId", dropId }
+        });
+
+        switch (type)
         {
             case DropType.TWITTER:
                 twitterHits += 1;
@@ -248,11 +273,14 @@ public class GameConfig : MonoBehaviour
 
     public void PauseOrResume()
     {
-        if (Time.timeScale == 0)
+        bool isPaused = Time.timeScale == 0;
+        if (isPaused)
         {
+            eventsManager.AddEvent("resume");
             Time.timeScale = 1f;
         } else
         {
+            eventsManager.AddEvent("pause");
             Time.timeScale = 0f;
         }
     }
@@ -287,6 +315,8 @@ public class GameConfig : MonoBehaviour
 
         StopCoroutine(spawnDropsHandler);
         StartCoroutine(ShowEndScreen());
+
+        eventsManager.CompleteLevel(1, completedTasks);
     }
 
     IEnumerator ShowEndScreen()

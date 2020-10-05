@@ -553,6 +553,27 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "GameAnalyticsSDK.Events.GA_SpecialEvents",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "GameAnalyticsSDK.GameAnalytics",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "GameAnalyticsSDK.Setup.Settings",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "GameConfig",
             "moduleName": "",
             "usedInScenes": []
@@ -568,6 +589,13 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "InfiniteMovingBelt",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "PlayFab.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "PlayFabSharedSettings",
             "moduleName": "",
             "usedInScenes": []
         },

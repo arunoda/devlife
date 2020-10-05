@@ -51,9 +51,15 @@
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="DevLifeActions" preserve="nothing"/>
 		<type fullname="Drop" preserve="nothing"/>
+		<type fullname="GameAnalyticsSDK.Events.GA_SpecialEvents" preserve="nothing"/>
+		<type fullname="GameAnalyticsSDK.GameAnalytics" preserve="nothing"/>
+		<type fullname="GameAnalyticsSDK.Setup.Settings" preserve="nothing"/>
 		<type fullname="GameConfig" preserve="nothing"/>
 		<type fullname="GameDev" preserve="nothing"/>
 		<type fullname="InfiniteMovingBelt" preserve="nothing"/>
+	</assembly>
+	<assembly fullname="PlayFab">
+		<type fullname="PlayFabSharedSettings" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.TextMeshPro">
 		<type fullname="TMPro.TMP_ColorGradient" preserve="nothing"/>

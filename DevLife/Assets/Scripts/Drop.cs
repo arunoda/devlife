@@ -51,11 +51,12 @@ public class Drop : MonoBehaviour
         
         if (other.CompareTag("Floor"))
         {
+            GameConfig.current.NotifyHitOnFloor(type, gameObject.GetInstanceID());
             GameConfig.current.RenderExplodeGround(transform.position);
             Destroy(gameObject);
         } else if (other.CompareTag("Player"))
         {
-            GameConfig.current.NotifyHit(type);
+            GameConfig.current.NotifyHit(type, gameObject.GetInstanceID());
             GameConfig.current.RenderExplodeDev(transform.position);
             if (type == GameConfig.DropType.TWITTER)
             {
@@ -64,7 +65,6 @@ public class Drop : MonoBehaviour
             }
             Destroy(gameObject);
         }
-        
     }
 
     private void Hide()
