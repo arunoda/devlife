@@ -20563,7 +20563,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordDeriveBytes__ctor_mCB0F0C0188D23
 		UTF8Encoding__ctor_mA83C010AF67DEDDC3E671DFDAF49634DFB2A2C90(L_0, (bool)0, /*hidden argument*/NULL);
 		String_t* L_1 = ___strPassword0;
 		NullCheck(L_0);
-		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_2 = VirtFuncInvoker1< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, String_t* >::Invoke(17 /* System.Byte[] System.Text.Encoding::GetBytes(System.String) */, L_0, L_1);
+		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_2 = VirtFuncInvoker1< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, String_t* >::Invoke(18 /* System.Byte[] System.Text.Encoding::GetBytes(System.String) */, L_0, L_1);
 		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_3 = ___rgbSalt1;
 		String_t* L_4 = ___strHashName2;
 		int32_t L_5 = ___iterations3;
@@ -21175,10 +21175,10 @@ IL_003c:
 		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_14 = __this->get__baseValue_3();
 		NullCheck(L_14);
 		NullCheck(L_12);
-		VirtActionInvoker3< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(32 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_12, L_13, 0, (((int32_t)((int32_t)(((RuntimeArray*)L_14)->max_length)))));
+		VirtActionInvoker3< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(33 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_12, L_13, 0, (((int32_t)((int32_t)(((RuntimeArray*)L_14)->max_length)))));
 		CryptoStream_tF66A4175F53BDFFC4936AF7FD02BD54C5B024B66 * L_15 = V_3;
 		NullCheck(L_15);
-		VirtActionInvoker0::Invoke(18 /* System.Void System.IO.Stream::Close() */, L_15);
+		VirtActionInvoker0::Invoke(19 /* System.Void System.IO.Stream::Close() */, L_15);
 		IL2CPP_LEAVE(0x6A, FINALLY_0060);
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
@@ -21253,10 +21253,10 @@ IL_00a3:
 		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_32 = __this->get__baseValue_3();
 		NullCheck(L_32);
 		NullCheck(L_30);
-		VirtActionInvoker3< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(32 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_30, L_31, 0, (((int32_t)((int32_t)(((RuntimeArray*)L_32)->max_length)))));
+		VirtActionInvoker3< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(33 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_30, L_31, 0, (((int32_t)((int32_t)(((RuntimeArray*)L_32)->max_length)))));
 		CryptoStream_tF66A4175F53BDFFC4936AF7FD02BD54C5B024B66 * L_33 = V_4;
 		NullCheck(L_33);
-		VirtActionInvoker0::Invoke(18 /* System.Void System.IO.Stream::Close() */, L_33);
+		VirtActionInvoker0::Invoke(19 /* System.Void System.IO.Stream::Close() */, L_33);
 		IL2CPP_LEAVE(0xD6, FINALLY_00ca);
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
@@ -21413,7 +21413,7 @@ IL_007c:
 		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_27 = V_1;
 		int32_t L_28 = V_0;
 		NullCheck(L_26);
-		VirtActionInvoker3< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(32 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_26, L_27, 0, L_28);
+		VirtActionInvoker3< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(33 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_26, L_27, 0, L_28);
 	}
 
 IL_00a8:
@@ -25454,7 +25454,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinnedBufferMemoryStream_Finalize_mB902B
 IL_0000:
 	try
 	{ // begin try (depth: 1)
-		VirtActionInvoker1< bool >::Invoke(19 /* System.Void System.IO.Stream::Dispose(System.Boolean) */, __this, (bool)0);
+		VirtActionInvoker1< bool >::Invoke(20 /* System.Void System.IO.Stream::Dispose(System.Boolean) */, __this, (bool)0);
 		IL2CPP_LEAVE(0x10, FINALLY_0009);
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
@@ -33617,7 +33617,7 @@ IL_0017:
 		Encoding_tE901442411E2E70039D2A4AE77FB81C3D6064827 * L_2 = Encoding_get_UTF8_mC877FB3137BBD566AEE7B15F9BF61DC4EF8F5E5E(/*hidden argument*/NULL);
 		String_t* L_3 = ___str0;
 		NullCheck(L_2);
-		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_4 = VirtFuncInvoker1< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, String_t* >::Invoke(17 /* System.Byte[] System.Text.Encoding::GetBytes(System.String) */, L_2, L_3);
+		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_4 = VirtFuncInvoker1< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, String_t* >::Invoke(18 /* System.Byte[] System.Text.Encoding::GetBytes(System.String) */, L_2, L_3);
 		IL2CPP_RUNTIME_CLASS_INIT(RNGCryptoServiceProvider_t696D1B0DFED446BE4718F7E18ABFFBB6E5A8A5A1_il2cpp_TypeInfo_var);
 		intptr_t L_5 = RNGCryptoServiceProvider_RngInitialize_m5430B70826675AA6225BF55C59AA18DBFE4C4667(L_4, /*hidden argument*/NULL);
 		__this->set__handle_1((intptr_t)L_5);

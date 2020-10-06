@@ -46,7 +46,7 @@ public class GameConfig : MonoBehaviour
     private Camera mainCamera;
     private int prevScreenWidthPixels = 0;
     private Coroutine spawnDropsHandler;
-    private bool freezed = true;
+    private int freezedCount = 1;
     private bool gameOver = false;
 
     public delegate void FreezeChangeHandler(bool isFreezed);
@@ -65,8 +65,21 @@ public class GameConfig : MonoBehaviour
         UnFreeze();
         gameOverPanel.SetActive(false);
 
-        eventsManager.Login("test-user");
+        eventsManager.Login(GetUserName());
         eventsManager.StartLevel(1);
+    }
+
+    private string GetUserName()
+    {
+        var username = PlayerPrefs.GetString("username", null);
+        if (username == null || username == "")
+        {
+            username = System.Guid.NewGuid().ToString();
+            PlayerPrefs.SetString("username", username);
+            PlayerPrefs.Save();
+        }
+
+        return username;
     }
 
     // Update is called once per frame
@@ -160,14 +173,14 @@ public class GameConfig : MonoBehaviour
 
     public void Freeze()
     {
-        if (gameOver || freezed)
+        if (gameOver || freezedCount > 0)
         {
             return;
         }
 
         eventsManager.AddEvent("freeze");
 
-        freezed = true;
+        freezedCount += 1;
         freezeHandlers?.Invoke(true);
         StopCoroutine(spawnDropsHandler);
         
@@ -183,14 +196,14 @@ public class GameConfig : MonoBehaviour
 
     public void UnFreeze()
     {
-        if (gameOver || !freezed)
+        if (gameOver || freezedCount == 0)
         {
             return;
         }
 
         eventsManager.AddEvent("unfreeze");
 
-        freezed = false;
+        freezedCount -= 1;
         freezeHandlers?.Invoke(false);
         spawnDropsHandler = StartCoroutine(SpawnDrops());
        
@@ -199,7 +212,7 @@ public class GameConfig : MonoBehaviour
 
     public bool IsFreezed()
     {
-        return freezed;
+        return freezedCount > 0;
     }
     
     public void OnFreezeChange(FreezeChangeHandler e)

@@ -19529,7 +19529,7 @@ IL_0070:
 		NullCheck(L_27);
 		int32_t L_28 = L_27->get_AvailableBytesOut_6();
 		NullCheck(L_24);
-		VirtActionInvoker3< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(32 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_24, L_25, 0, ((int32_t)il2cpp_codegen_subtract((int32_t)(((int32_t)((int32_t)(((RuntimeArray*)L_26)->max_length)))), (int32_t)L_28)));
+		VirtActionInvoker3< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(33 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_24, L_25, 0, ((int32_t)il2cpp_codegen_subtract((int32_t)(((int32_t)((int32_t)(((RuntimeArray*)L_26)->max_length)))), (int32_t)L_28)));
 	}
 
 IL_0094:
@@ -19762,7 +19762,7 @@ IL_0035:
 		// _outStream.Close();
 		Stream_t5DC87DD578C2C5298D98E7802E92DEABB66E2ECB * L_5 = __this->get__outStream_10();
 		NullCheck(L_5);
-		VirtActionInvoker0::Invoke(18 /* System.Void System.IO.Stream::Close() */, L_5);
+		VirtActionInvoker0::Invoke(19 /* System.Void System.IO.Stream::Close() */, L_5);
 	}
 
 IL_004f:
@@ -19778,11 +19778,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParallelDeflateOutputStream_Dispose_m30F
 {
 	{
 		// Close();
-		VirtActionInvoker0::Invoke(18 /* System.Void System.IO.Stream::Close() */, __this);
+		VirtActionInvoker0::Invoke(19 /* System.Void System.IO.Stream::Close() */, __this);
 		// _pool = null;
 		__this->set__pool_7((List_1_t0A90684E5E7A07F05DD76B9854DDA1499549023D *)NULL);
 		// Dispose(true);
-		VirtActionInvoker1< bool >::Invoke(19 /* System.Void System.IO.Stream::Dispose(System.Boolean) */, __this, (bool)1);
+		VirtActionInvoker1< bool >::Invoke(20 /* System.Void System.IO.Stream::Dispose(System.Boolean) */, __this, (bool)1);
 		// }
 		return;
 	}
@@ -20222,7 +20222,7 @@ IL_00e0:
 		NullCheck(L_35);
 		int32_t L_36 = L_35->get_compressedBytesAvailable_6();
 		NullCheck(L_32);
-		VirtActionInvoker3< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(32 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_32, L_34, 0, L_36);
+		VirtActionInvoker3< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(33 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_32, L_34, 0, L_36);
 		// _runningCrc.Combine(workitem.crc, workitem.inputBytesAvailable);
 		CRC32_tA22999B2090CF8FB9FD50B79803BF2E296E4437C * L_37 = __this->get__runningCrc_22();
 		WorkItem_t571A5BA81AEDBD609FC8024C20FBE2A652D1C2B7 * L_38 = V_3;

@@ -53,13 +53,15 @@ public class Drop : MonoBehaviour
         {
             GameConfig.current.NotifyHitOnFloor(type, gameObject.GetInstanceID());
             GameConfig.current.RenderExplodeGround(transform.position);
-            Destroy(gameObject);
+            DestroyLater();
         } else if (other.CompareTag("Player"))
         {
             GameConfig.current.NotifyHit(type, gameObject.GetInstanceID());
             GameConfig.current.RenderExplodeDev(transform.position);
             if (type == GameConfig.DropType.TWITTER)
             {
+                causedFreezing = true;
+                Hide();
                 StartCoroutine(HandleTwitterHit());
                 return;
             }
@@ -75,9 +77,6 @@ public class Drop : MonoBehaviour
 
     private IEnumerator HandleTwitterHit()
     {
-        causedFreezing = true;
-        Hide();
-
         GameConfig.current.Freeze();
         yield return new WaitForSeconds(3);
         
@@ -89,7 +88,18 @@ public class Drop : MonoBehaviour
     {
         // We don't need to handle if this drop caused the freezing
         if (causedFreezing) return;
-        
-        gameObject.SetActive(!isFreezed);
+
+        Destroy(gameObject);
+    }
+
+    private IEnumerable DestroyLater()
+    {
+        yield return new WaitForSeconds(1);
+        if (causedFreezing)
+        {
+            yield break;
+        }
+
+        Destroy(gameObject);
     }
 }

@@ -16558,6 +16558,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Thread_ClrState_mF64C6A9727BC53506FC4505
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Thread_SetName_internal_m37A2005D94E334D9258EC046F9E1BB1623E0A3BB (InternalThread_t12B78B27503AE19E9122E212419A66843BF746EB * ___thread0, String_t* ___name1, const RuntimeMethod* method);
 // System.Threading.ThreadState System.Threading.Thread::GetState(System.Threading.InternalThread)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Thread_GetState_mC24B6A2A6B3DF1E62FD3A07BCCD0166E995DF320 (InternalThread_t12B78B27503AE19E9122E212419A66843BF746EB * ___thread0, const RuntimeMethod* method);
+// System.Void System.Threading.Thread::Abort_internal(System.Threading.InternalThread,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Thread_Abort_internal_m8EDD8BDA3765C4360CE1209823847897B57063B6 (InternalThread_t12B78B27503AE19E9122E212419A66843BF746EB * ___thread0, RuntimeObject * ___stateInfo1, const RuntimeMethod* method);
 // System.Void System.Threading.Thread::SpinWait_nop()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Thread_SpinWait_nop_mFDA675C53A58946E95D89A564D6B0FBB0108857E (const RuntimeMethod* method);
 // System.IntPtr System.Threading.Thread::Thread_internal(System.MulticastDelegate)
@@ -21097,7 +21099,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TailStream__ctor_m4C41EF0A4DC32AAA259AA7
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TailStream_Clear_m342CD7E4F95BA76B3C061A63D471A34CEBAC138C (TailStream_t1BE44991F378586CE124EB44E5D0533AD6298B8C * __this, const RuntimeMethod* method)
 {
 	{
-		VirtActionInvoker0::Invoke(18 /* System.Void System.IO.Stream::Close() */, __this);
+		VirtActionInvoker0::Invoke(19 /* System.Void System.IO.Stream::Close() */, __this);
 		return;
 	}
 }
@@ -35232,7 +35234,7 @@ IL_0028:
 			ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_10 = __this->get_buffer_3();
 			NullCheck(L_10);
 			NullCheck(L_8);
-			int32_t L_11 = VirtFuncInvoker3< int32_t, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(30 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_8, L_9, 0, (((int32_t)((int32_t)(((RuntimeArray*)L_10)->max_length)))));
+			int32_t L_11 = VirtFuncInvoker3< int32_t, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(31 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_8, L_9, 0, (((int32_t)((int32_t)(((RuntimeArray*)L_10)->max_length)))));
 			ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_12 = __this->get_buffer_3();
 			NullCheck(L_12);
 			if ((((int32_t)L_11) == ((int32_t)(((int32_t)((int32_t)(((RuntimeArray*)L_12)->max_length)))))))
@@ -35744,7 +35746,7 @@ IL_000a:
 		int32_t L_9 = ___offset1;
 		int32_t L_10 = V_0;
 		NullCheck(L_7);
-		String_t* L_11 = VirtFuncInvoker3< String_t*, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(35 /* System.String System.Text.Encoding::GetString(System.Byte[],System.Int32,System.Int32) */, L_7, L_8, L_9, L_10);
+		String_t* L_11 = VirtFuncInvoker3< String_t*, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(36 /* System.String System.Text.Encoding::GetString(System.Byte[],System.Int32,System.Int32) */, L_7, L_8, L_9, L_10);
 		return L_11;
 	}
 }
@@ -40174,6 +40176,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Thread_get_ThreadState_m887D9D564C460
 		InternalThread_t12B78B27503AE19E9122E212419A66843BF746EB * L_0 = Thread_get_Internal_mE38B0B156077D36444ABCAEEE168CC1EA671C49D(__this, /*hidden argument*/NULL);
 		int32_t L_1 = Thread_GetState_mC24B6A2A6B3DF1E62FD3A07BCCD0166E995DF320(L_0, /*hidden argument*/NULL);
 		return L_1;
+	}
+}
+// System.Void System.Threading.Thread::Abort_internal(System.Threading.InternalThread,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Thread_Abort_internal_m8EDD8BDA3765C4360CE1209823847897B57063B6 (InternalThread_t12B78B27503AE19E9122E212419A66843BF746EB * ___thread0, RuntimeObject * ___stateInfo1, const RuntimeMethod* method)
+{
+	typedef void (*Thread_Abort_internal_m8EDD8BDA3765C4360CE1209823847897B57063B6_ftn) (InternalThread_t12B78B27503AE19E9122E212419A66843BF746EB *, RuntimeObject *);
+	using namespace il2cpp::icalls;
+	 ((Thread_Abort_internal_m8EDD8BDA3765C4360CE1209823847897B57063B6_ftn)mscorlib::System::Threading::Thread::Abort_internal40) (___thread0, ___stateInfo1);
+}
+// System.Void System.Threading.Thread::Abort()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Thread_Abort_m9D4D14BFB0F9CC71D026C83EBF3606A6ABE96AF4 (Thread_tB9EB71664220EE16451AF3276D78DE6614D2A414 * __this, const RuntimeMethod* method)
+{
+	{
+		InternalThread_t12B78B27503AE19E9122E212419A66843BF746EB * L_0 = Thread_get_Internal_mE38B0B156077D36444ABCAEEE168CC1EA671C49D(__this, /*hidden argument*/NULL);
+		Thread_Abort_internal_m8EDD8BDA3765C4360CE1209823847897B57063B6(L_0, NULL, /*hidden argument*/NULL);
+		return;
 	}
 }
 // System.Void System.Threading.Thread::SpinWait_nop()

@@ -21672,7 +21672,7 @@ IL_0066:
 		NullCheck(L_26);
 		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_27 = ASN1_get_Value_m95545A82635424B999816713F09A224ED01DF0C2(L_26, /*hidden argument*/NULL);
 		NullCheck(L_25);
-		String_t* L_28 = VirtFuncInvoker1< String_t*, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* >::Invoke(34 /* System.String System.Text.Encoding::GetString(System.Byte[]) */, L_25, L_27);
+		String_t* L_28 = VirtFuncInvoker1< String_t*, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* >::Invoke(35 /* System.String System.Text.Encoding::GetString(System.Byte[]) */, L_25, L_27);
 		return L_28;
 	}
 }
@@ -33857,7 +33857,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ReadAsyncResult_CompleteRead_mA1A4C25DB9
 		Stream_t5DC87DD578C2C5298D98E7802E92DEABB66E2ECB * L_1 = DelegatedStream_get_BaseStream_m134375925CC6E5ED9ED1CB6410658B0182445DDE_inline(L_0, /*hidden argument*/NULL);
 		RuntimeObject* L_2 = ___result0;
 		NullCheck(L_1);
-		int32_t L_3 = VirtFuncInvoker1< int32_t, RuntimeObject* >::Invoke(23 /* System.Int32 System.IO.Stream::EndRead(System.IAsyncResult) */, L_1, L_2);
+		int32_t L_3 = VirtFuncInvoker1< int32_t, RuntimeObject* >::Invoke(24 /* System.Int32 System.IO.Stream::EndRead(System.IAsyncResult) */, L_1, L_2);
 		__this->set_read_16(L_3);
 		int32_t L_4 = __this->get_read_16();
 		if (L_4)
@@ -33917,7 +33917,7 @@ IL_0000:
 		IL2CPP_RUNTIME_CLASS_INIT(ReadAsyncResult_t9143BB464AD179D6134348C30A32B3958E6E922B_il2cpp_TypeInfo_var);
 		AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA * L_5 = ((ReadAsyncResult_t9143BB464AD179D6134348C30A32B3958E6E922B_StaticFields*)il2cpp_codegen_static_fields_for(ReadAsyncResult_t9143BB464AD179D6134348C30A32B3958E6E922B_il2cpp_TypeInfo_var))->get_onRead_17();
 		NullCheck(L_1);
-		RuntimeObject* L_6 = VirtFuncInvoker5< RuntimeObject*, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t, AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA *, RuntimeObject * >::Invoke(22 /* System.IAsyncResult System.IO.Stream::BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) */, L_1, L_2, L_3, L_4, L_5, __this);
+		RuntimeObject* L_6 = VirtFuncInvoker5< RuntimeObject*, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t, AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA *, RuntimeObject * >::Invoke(23 /* System.IAsyncResult System.IO.Stream::BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) */, L_1, L_2, L_3, L_4, L_5, __this);
 		V_0 = L_6;
 		RuntimeObject* L_7 = V_0;
 		NullCheck(L_7);
@@ -34200,7 +34200,7 @@ IL_0000:
 		IL2CPP_RUNTIME_CLASS_INIT(WriteAsyncResult_tBD0DB6B90B785A5FBC8311FF8997D2FE580AB7DB_il2cpp_TypeInfo_var);
 		AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA * L_18 = ((WriteAsyncResult_tBD0DB6B90B785A5FBC8311FF8997D2FE580AB7DB_StaticFields*)il2cpp_codegen_static_fields_for(WriteAsyncResult_tBD0DB6B90B785A5FBC8311FF8997D2FE580AB7DB_il2cpp_TypeInfo_var))->get_onWrite_16();
 		NullCheck(L_11);
-		RuntimeObject* L_19 = VirtFuncInvoker5< RuntimeObject*, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t, AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA *, RuntimeObject * >::Invoke(25 /* System.IAsyncResult System.IO.Stream::BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) */, L_11, L_14, 0, L_17, L_18, __this);
+		RuntimeObject* L_19 = VirtFuncInvoker5< RuntimeObject*, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t, AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA *, RuntimeObject * >::Invoke(26 /* System.IAsyncResult System.IO.Stream::BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) */, L_11, L_14, 0, L_17, L_18, __this);
 		V_0 = L_19;
 		RuntimeObject* L_20 = V_0;
 		NullCheck(L_20);
@@ -34235,7 +34235,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WriteAsyncResult_CompleteWrite_m98C58761
 		Stream_t5DC87DD578C2C5298D98E7802E92DEABB66E2ECB * L_1 = DelegatedStream_get_BaseStream_m134375925CC6E5ED9ED1CB6410658B0182445DDE_inline(L_0, /*hidden argument*/NULL);
 		RuntimeObject* L_2 = ___result0;
 		NullCheck(L_1);
-		VirtActionInvoker1< RuntimeObject* >::Invoke(26 /* System.Void System.IO.Stream::EndWrite(System.IAsyncResult) */, L_1, L_2);
+		VirtActionInvoker1< RuntimeObject* >::Invoke(27 /* System.Void System.IO.Stream::EndWrite(System.IAsyncResult) */, L_1, L_2);
 		Base64Stream_t6AEA304EB68DEE74D0397C25BBEE3F76399B1C9B * L_3 = __this->get_parent_12();
 		NullCheck(L_3);
 		Base64WriteStateInfo_tC1A1EF5C9EFCFB0AE4A8D15CD7E6944FF06BFA95 * L_4 = Base64Stream_get_WriteState_m5CF86F55512B274F53231F4CBB5621FBAE8C8C19_inline(L_3, /*hidden argument*/NULL);

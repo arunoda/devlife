@@ -27469,7 +27469,7 @@ IL_008c:
 				ConfiguredTaskAwaiter_GetResult_m29A9880E9FCC4B8E9928B60E137FB53D0C8F0CE6((ConfiguredTaskAwaiter_tF5D70726C84CD1BBDFC5E58FFB1000C5750EA28C *)(&V_4), /*hidden argument*/NULL);
 				MemoryStream_t0B450399DD6D0175074FED99DD321D65771C9E1C * L_18 = __this->get_U3CmsU3E5__1_3();
 				NullCheck(L_18);
-				ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_19 = VirtFuncInvoker0< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* >::Invoke(37 /* System.Byte[] System.IO.MemoryStream::ToArray() */, L_18);
+				ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_19 = VirtFuncInvoker0< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* >::Invoke(38 /* System.Byte[] System.IO.MemoryStream::ToArray() */, L_18);
 				V_3 = L_19;
 				ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_20 = V_3;
 				ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_21 = V_3;
@@ -29519,7 +29519,7 @@ IL_052c:
 IL_052f:
 			{
 				NullCheck(G_B67_0);
-				VirtActionInvoker0::Invoke(18 /* System.Void System.IO.Stream::Close() */, G_B67_0);
+				VirtActionInvoker0::Invoke(19 /* System.Void System.IO.Stream::Close() */, G_B67_0);
 			}
 
 IL_0534:
@@ -31174,7 +31174,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t U3CU3Ec__DisplayClass66_0_U3CInnerRea
 		int32_t L_7 = BufferOffsetSize_get_EndOffset_m9EED7B6B6EF1F2518A735AF875F88A5E03F0881F(L_6, /*hidden argument*/NULL);
 		int32_t L_8 = __this->get_len_1();
 		NullCheck(L_1);
-		int32_t L_9 = VirtFuncInvoker3< int32_t, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(30 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_1, L_4, L_7, L_8);
+		int32_t L_9 = VirtFuncInvoker3< int32_t, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(31 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_1, L_4, L_7, L_8);
 		return L_9;
 	}
 }
@@ -31309,7 +31309,7 @@ IL_0078:
 			int32_t L_29 = L_28->get_len_1();
 			CancellationToken_tC9D68381C9164A4BA10397257E87ADC832AF5FFD  L_30 = __this->get_cancellationToken_3();
 			NullCheck(L_21);
-			Task_1_tEF253D967DB628A9F8A389A9F2E4516871FD3725 * L_31 = VirtFuncInvoker4< Task_1_tEF253D967DB628A9F8A389A9F2E4516871FD3725 *, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t, CancellationToken_tC9D68381C9164A4BA10397257E87ADC832AF5FFD  >::Invoke(24 /* System.Threading.Tasks.Task`1<System.Int32> System.IO.Stream::ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken) */, L_21, L_24, L_27, L_29, L_30);
+			Task_1_tEF253D967DB628A9F8A389A9F2E4516871FD3725 * L_31 = VirtFuncInvoker4< Task_1_tEF253D967DB628A9F8A389A9F2E4516871FD3725 *, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t, CancellationToken_tC9D68381C9164A4BA10397257E87ADC832AF5FFD  >::Invoke(25 /* System.Threading.Tasks.Task`1<System.Int32> System.IO.Stream::ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken) */, L_21, L_24, L_27, L_29, L_30);
 			V_4 = L_31;
 		}
 
@@ -31990,7 +31990,7 @@ IL_010b:
 					X509CertificateCollection_t2990976CAD6265665564A400870A381968AB706B * L_53 = __this->get_clientCertificates_8();
 					bool L_54 = __this->get_clientCertRequired_9();
 					NullCheck(L_48);
-					MobileTlsContext_t71B1F2E9A8145F69540B65CC5567C13A839FA3FF * L_55 = VirtFuncInvoker6< MobileTlsContext_t71B1F2E9A8145F69540B65CC5567C13A839FA3FF *, bool, String_t*, int32_t, X509Certificate_t6F3E94ED7C8FB33253E4705C76A40144E59F0553 *, X509CertificateCollection_t2990976CAD6265665564A400870A381968AB706B *, bool >::Invoke(58 /* Mono.Net.Security.MobileTlsContext Mono.Net.Security.MobileAuthenticatedStream::CreateContext(System.Boolean,System.String,System.Security.Authentication.SslProtocols,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509CertificateCollection,System.Boolean) */, L_48, L_49, L_50, L_51, L_52, L_53, L_54);
+					MobileTlsContext_t71B1F2E9A8145F69540B65CC5567C13A839FA3FF * L_55 = VirtFuncInvoker6< MobileTlsContext_t71B1F2E9A8145F69540B65CC5567C13A839FA3FF *, bool, String_t*, int32_t, X509Certificate_t6F3E94ED7C8FB33253E4705C76A40144E59F0553 *, X509CertificateCollection_t2990976CAD6265665564A400870A381968AB706B *, bool >::Invoke(59 /* Mono.Net.Security.MobileTlsContext Mono.Net.Security.MobileAuthenticatedStream::CreateContext(System.Boolean,System.String,System.Security.Authentication.SslProtocols,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509CertificateCollection,System.Boolean) */, L_48, L_49, L_50, L_51, L_52, L_53, L_54);
 					NullCheck(L_47);
 					L_47->set_xobileTlsContext_7(L_55);
 					IL2CPP_LEAVE(0x163, FINALLY_0153);
@@ -47065,7 +47065,7 @@ IL_00de:
 		AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA * L_28 = (AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA *)il2cpp_codegen_object_new(AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA_il2cpp_TypeInfo_var);
 		AsyncCallback__ctor_m90AB9820D2F8B0B06E5E51AF3E9086415A122D05(L_28, NULL, (intptr_t)((intptr_t)WebClient_DownloadBitsReadCallback_m094BD2D47B9EB56258A04A59F96A1457572B2FD2_RuntimeMethod_var), /*hidden argument*/NULL);
 		NullCheck(L_25);
-		VirtFuncInvoker5< RuntimeObject*, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t, AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA *, RuntimeObject * >::Invoke(22 /* System.IAsyncResult System.IO.Stream::BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) */, L_25, L_26, 0, (((int32_t)((int32_t)L_27))), L_28, __this);
+		VirtFuncInvoker5< RuntimeObject*, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t, AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA *, RuntimeObject * >::Invoke(23 /* System.IAsyncResult System.IO.Stream::BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) */, L_25, L_26, 0, (((int32_t)((int32_t)L_27))), L_28, __this);
 		goto IL_0138;
 	}
 
@@ -47098,7 +47098,7 @@ IL_011e:
 		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_33 = __this->get_InnerBuffer_2();
 		int64_t L_34 = __this->get_Length_9();
 		NullCheck(L_32);
-		int32_t L_35 = VirtFuncInvoker3< int32_t, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(30 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_32, L_33, 0, (((int32_t)((int32_t)L_34))));
+		int32_t L_35 = VirtFuncInvoker3< int32_t, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(31 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_32, L_33, 0, (((int32_t)((int32_t)L_34))));
 		return L_35;
 	}
 
@@ -47142,7 +47142,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DownloadBitsState_RetrieveBytes_m52787F0
 		int32_t* L_5 = ___bytesRetrieved0;
 		int32_t L_6 = *((int32_t*)L_5);
 		NullCheck(L_3);
-		VirtActionInvoker3< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(32 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_3, L_4, 0, L_6);
+		VirtActionInvoker3< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(33 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_3, L_4, 0, L_6);
 		goto IL_003a;
 	}
 
@@ -47202,7 +47202,7 @@ IL_0057:
 		AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA * L_25 = (AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA *)il2cpp_codegen_object_new(AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA_il2cpp_TypeInfo_var);
 		AsyncCallback__ctor_m90AB9820D2F8B0B06E5E51AF3E9086415A122D05(L_25, NULL, (intptr_t)((intptr_t)WebClient_DownloadBitsReadCallback_m094BD2D47B9EB56258A04A59F96A1457572B2FD2_RuntimeMethod_var), /*hidden argument*/NULL);
 		NullCheck(L_22);
-		VirtFuncInvoker5< RuntimeObject*, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t, AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA *, RuntimeObject * >::Invoke(22 /* System.IAsyncResult System.IO.Stream::BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) */, L_22, L_23, 0, (((int32_t)((int32_t)L_24))), L_25, __this);
+		VirtFuncInvoker5< RuntimeObject*, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t, AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA *, RuntimeObject * >::Invoke(23 /* System.IAsyncResult System.IO.Stream::BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) */, L_22, L_23, 0, (((int32_t)((int32_t)L_24))), L_25, __this);
 		goto IL_00c2;
 	}
 
@@ -47213,7 +47213,7 @@ IL_00a7:
 		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_28 = __this->get_InnerBuffer_2();
 		int64_t L_29 = __this->get_Length_9();
 		NullCheck(L_27);
-		int32_t L_30 = VirtFuncInvoker3< int32_t, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(30 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_27, L_28, 0, (((int32_t)((int32_t)L_29))));
+		int32_t L_30 = VirtFuncInvoker3< int32_t, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(31 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_27, L_28, 0, (((int32_t)((int32_t)L_29))));
 		*((int32_t*)L_26) = (int32_t)L_30;
 	}
 
@@ -47268,7 +47268,7 @@ IL_0108:
 	{
 		Stream_t5DC87DD578C2C5298D98E7802E92DEABB66E2ECB * L_41 = __this->get_ReadStream_6();
 		NullCheck(L_41);
-		VirtActionInvoker0::Invoke(18 /* System.Void System.IO.Stream::Close() */, L_41);
+		VirtActionInvoker0::Invoke(19 /* System.Void System.IO.Stream::Close() */, L_41);
 	}
 
 IL_011b:
@@ -47282,7 +47282,7 @@ IL_011b:
 	{
 		Stream_t5DC87DD578C2C5298D98E7802E92DEABB66E2ECB * L_43 = __this->get_WriteStream_1();
 		NullCheck(L_43);
-		VirtActionInvoker0::Invoke(18 /* System.Void System.IO.Stream::Close() */, L_43);
+		VirtActionInvoker0::Invoke(19 /* System.Void System.IO.Stream::Close() */, L_43);
 		goto IL_019f;
 	}
 
@@ -47379,7 +47379,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DownloadBitsState_Close_mA0C1D0154C4056D
 	{
 		Stream_t5DC87DD578C2C5298D98E7802E92DEABB66E2ECB * L_1 = __this->get_WriteStream_1();
 		NullCheck(L_1);
-		VirtActionInvoker0::Invoke(18 /* System.Void System.IO.Stream::Close() */, L_1);
+		VirtActionInvoker0::Invoke(19 /* System.Void System.IO.Stream::Close() */, L_1);
 	}
 
 IL_0013:
@@ -47393,7 +47393,7 @@ IL_0013:
 	{
 		Stream_t5DC87DD578C2C5298D98E7802E92DEABB66E2ECB * L_3 = __this->get_ReadStream_6();
 		NullCheck(L_3);
-		VirtActionInvoker0::Invoke(18 /* System.Void System.IO.Stream::Close() */, L_3);
+		VirtActionInvoker0::Invoke(19 /* System.Void System.IO.Stream::Close() */, L_3);
 	}
 
 IL_0026:
@@ -47591,7 +47591,7 @@ IL_0028:
 		AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA * L_12 = (AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA *)il2cpp_codegen_object_new(AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA_il2cpp_TypeInfo_var);
 		AsyncCallback__ctor_m90AB9820D2F8B0B06E5E51AF3E9086415A122D05(L_12, NULL, (intptr_t)((intptr_t)WebClient_UploadBitsWriteCallback_mAC6539ADE48BAA0BC8FDE1DBA6AFEB37E204F0E1_RuntimeMethod_var), /*hidden argument*/NULL);
 		NullCheck(L_9);
-		VirtFuncInvoker5< RuntimeObject*, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t, AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA *, RuntimeObject * >::Invoke(25 /* System.IAsyncResult System.IO.Stream::BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) */, L_9, L_10, 0, (((int32_t)((int32_t)(((RuntimeArray*)L_11)->max_length)))), L_12, __this);
+		VirtFuncInvoker5< RuntimeObject*, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t, AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA *, RuntimeObject * >::Invoke(26 /* System.IAsyncResult System.IO.Stream::BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) */, L_9, L_10, 0, (((int32_t)((int32_t)(((RuntimeArray*)L_11)->max_length)))), L_12, __this);
 		return;
 	}
 
@@ -47602,7 +47602,7 @@ IL_0065:
 		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_15 = V_0;
 		NullCheck(L_15);
 		NullCheck(L_13);
-		VirtActionInvoker3< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(32 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_13, L_14, 0, (((int32_t)((int32_t)(((RuntimeArray*)L_15)->max_length)))));
+		VirtActionInvoker3< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(33 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_13, L_14, 0, (((int32_t)((int32_t)(((RuntimeArray*)L_15)->max_length)))));
 		return;
 	}
 }
@@ -47659,7 +47659,7 @@ IL_0025:
 		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_8 = __this->get_InnerBuffer_4();
 		NullCheck(L_8);
 		NullCheck(L_6);
-		int32_t L_9 = VirtFuncInvoker3< int32_t, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(30 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_6, L_7, 0, (((int32_t)((int32_t)(((RuntimeArray*)L_8)->max_length)))));
+		int32_t L_9 = VirtFuncInvoker3< int32_t, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(31 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_6, L_7, 0, (((int32_t)((int32_t)(((RuntimeArray*)L_8)->max_length)))));
 		V_3 = L_9;
 		int32_t L_10 = V_3;
 		if ((((int32_t)L_10) > ((int32_t)0)))
@@ -47670,7 +47670,7 @@ IL_0025:
 	{
 		Stream_t5DC87DD578C2C5298D98E7802E92DEABB66E2ECB * L_11 = __this->get_ReadStream_11();
 		NullCheck(L_11);
-		VirtActionInvoker0::Invoke(18 /* System.Void System.IO.Stream::Close() */, L_11);
+		VirtActionInvoker0::Invoke(19 /* System.Void System.IO.Stream::Close() */, L_11);
 		__this->set_InnerBuffer_4((ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*)NULL);
 	}
 
@@ -47792,7 +47792,7 @@ IL_0111:
 		AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA * L_39 = (AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA *)il2cpp_codegen_object_new(AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA_il2cpp_TypeInfo_var);
 		AsyncCallback__ctor_m90AB9820D2F8B0B06E5E51AF3E9086415A122D05(L_39, NULL, (intptr_t)((intptr_t)WebClient_UploadBitsWriteCallback_mAC6539ADE48BAA0BC8FDE1DBA6AFEB37E204F0E1_RuntimeMethod_var), /*hidden argument*/NULL);
 		NullCheck(L_35);
-		VirtFuncInvoker5< RuntimeObject*, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t, AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA *, RuntimeObject * >::Invoke(25 /* System.IAsyncResult System.IO.Stream::BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) */, L_35, L_36, L_37, L_38, L_39, __this);
+		VirtFuncInvoker5< RuntimeObject*, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t, AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA *, RuntimeObject * >::Invoke(26 /* System.IAsyncResult System.IO.Stream::BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) */, L_35, L_36, L_37, L_38, L_39, __this);
 		goto IL_0159;
 	}
 
@@ -47802,7 +47802,7 @@ IL_014b:
 		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_41 = V_0;
 		int32_t L_42 = V_1;
 		NullCheck(L_40);
-		VirtActionInvoker3< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(32 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_40, L_41, 0, L_42);
+		VirtActionInvoker3< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(33 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_40, L_41, 0, L_42);
 	}
 
 IL_0159:
@@ -47823,7 +47823,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UploadBitsState_Close_m915DFF5A60A4C0626
 	{
 		Stream_t5DC87DD578C2C5298D98E7802E92DEABB66E2ECB * L_1 = __this->get_WriteStream_3();
 		NullCheck(L_1);
-		VirtActionInvoker0::Invoke(18 /* System.Void System.IO.Stream::Close() */, L_1);
+		VirtActionInvoker0::Invoke(19 /* System.Void System.IO.Stream::Close() */, L_1);
 	}
 
 IL_0013:
@@ -47837,7 +47837,7 @@ IL_0013:
 	{
 		Stream_t5DC87DD578C2C5298D98E7802E92DEABB66E2ECB * L_3 = __this->get_ReadStream_11();
 		NullCheck(L_3);
-		VirtActionInvoker0::Invoke(18 /* System.Void System.IO.Stream::Close() */, L_3);
+		VirtActionInvoker0::Invoke(19 /* System.Void System.IO.Stream::Close() */, L_3);
 	}
 
 IL_0026:
@@ -47998,7 +47998,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* WebClientWriteStream_BeginRead
 		AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA * L_4 = ___callback3;
 		RuntimeObject * L_5 = ___state4;
 		NullCheck(L_0);
-		RuntimeObject* L_6 = VirtFuncInvoker5< RuntimeObject*, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t, AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA *, RuntimeObject * >::Invoke(22 /* System.IAsyncResult System.IO.Stream::BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) */, L_0, L_1, L_2, L_3, L_4, L_5);
+		RuntimeObject* L_6 = VirtFuncInvoker5< RuntimeObject*, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t, AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA *, RuntimeObject * >::Invoke(23 /* System.IAsyncResult System.IO.Stream::BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) */, L_0, L_1, L_2, L_3, L_4, L_5);
 		return L_6;
 	}
 }
@@ -48013,7 +48013,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* WebClientWriteStream_BeginWrit
 		AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA * L_4 = ___callback3;
 		RuntimeObject * L_5 = ___state4;
 		NullCheck(L_0);
-		RuntimeObject* L_6 = VirtFuncInvoker5< RuntimeObject*, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t, AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA *, RuntimeObject * >::Invoke(25 /* System.IAsyncResult System.IO.Stream::BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) */, L_0, L_1, L_2, L_3, L_4, L_5);
+		RuntimeObject* L_6 = VirtFuncInvoker5< RuntimeObject*, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t, AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA *, RuntimeObject * >::Invoke(26 /* System.IAsyncResult System.IO.Stream::BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) */, L_0, L_1, L_2, L_3, L_4, L_5);
 		return L_6;
 	}
 }
@@ -48043,7 +48043,7 @@ IL_0003:
 		{
 			Stream_t5DC87DD578C2C5298D98E7802E92DEABB66E2ECB * L_1 = __this->get_m_stream_6();
 			NullCheck(L_1);
-			VirtActionInvoker0::Invoke(18 /* System.Void System.IO.Stream::Close() */, L_1);
+			VirtActionInvoker0::Invoke(19 /* System.Void System.IO.Stream::Close() */, L_1);
 			WebClient_tBB9C025453A3820E593327E112FF5D08F632604E * L_2 = __this->get_m_WebClient_7();
 			WebRequest_t130159AA9419464E465AE0DC62721CC40E86EE8E * L_3 = __this->get_m_request_5();
 			NullCheck(L_2);
@@ -48087,7 +48087,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t WebClientWriteStream_EndRead_m7E5C069
 		Stream_t5DC87DD578C2C5298D98E7802E92DEABB66E2ECB * L_0 = __this->get_m_stream_6();
 		RuntimeObject* L_1 = ___result0;
 		NullCheck(L_0);
-		int32_t L_2 = VirtFuncInvoker1< int32_t, RuntimeObject* >::Invoke(23 /* System.Int32 System.IO.Stream::EndRead(System.IAsyncResult) */, L_0, L_1);
+		int32_t L_2 = VirtFuncInvoker1< int32_t, RuntimeObject* >::Invoke(24 /* System.Int32 System.IO.Stream::EndRead(System.IAsyncResult) */, L_0, L_1);
 		return L_2;
 	}
 }
@@ -48098,7 +48098,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebClientWriteStream_EndWrite_mB42FE0A3A
 		Stream_t5DC87DD578C2C5298D98E7802E92DEABB66E2ECB * L_0 = __this->get_m_stream_6();
 		RuntimeObject* L_1 = ___result0;
 		NullCheck(L_0);
-		VirtActionInvoker1< RuntimeObject* >::Invoke(26 /* System.Void System.IO.Stream::EndWrite(System.IAsyncResult) */, L_0, L_1);
+		VirtActionInvoker1< RuntimeObject* >::Invoke(27 /* System.Void System.IO.Stream::EndWrite(System.IAsyncResult) */, L_0, L_1);
 		return;
 	}
 }
@@ -48108,7 +48108,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebClientWriteStream_Flush_m9467DB2AA6F4
 	{
 		Stream_t5DC87DD578C2C5298D98E7802E92DEABB66E2ECB * L_0 = __this->get_m_stream_6();
 		NullCheck(L_0);
-		VirtActionInvoker0::Invoke(20 /* System.Void System.IO.Stream::Flush() */, L_0);
+		VirtActionInvoker0::Invoke(21 /* System.Void System.IO.Stream::Flush() */, L_0);
 		return;
 	}
 }
@@ -48121,7 +48121,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t WebClientWriteStream_Read_mE90914FFF2
 		int32_t L_2 = ___offset1;
 		int32_t L_3 = ___count2;
 		NullCheck(L_0);
-		int32_t L_4 = VirtFuncInvoker3< int32_t, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(30 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_0, L_1, L_2, L_3);
+		int32_t L_4 = VirtFuncInvoker3< int32_t, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(31 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_0, L_1, L_2, L_3);
 		return L_4;
 	}
 }
@@ -48133,7 +48133,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t WebClientWriteStream_Seek_m49B7BC62C4
 		int64_t L_1 = ___offset0;
 		int32_t L_2 = ___origin1;
 		NullCheck(L_0);
-		int64_t L_3 = VirtFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(28 /* System.Int64 System.IO.Stream::Seek(System.Int64,System.IO.SeekOrigin) */, L_0, L_1, L_2);
+		int64_t L_3 = VirtFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(29 /* System.Int64 System.IO.Stream::Seek(System.Int64,System.IO.SeekOrigin) */, L_0, L_1, L_2);
 		return L_3;
 	}
 }
@@ -48144,7 +48144,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebClientWriteStream_SetLength_m8D3ADAA2
 		Stream_t5DC87DD578C2C5298D98E7802E92DEABB66E2ECB * L_0 = __this->get_m_stream_6();
 		int64_t L_1 = ___value0;
 		NullCheck(L_0);
-		VirtActionInvoker1< int64_t >::Invoke(29 /* System.Void System.IO.Stream::SetLength(System.Int64) */, L_0, L_1);
+		VirtActionInvoker1< int64_t >::Invoke(30 /* System.Void System.IO.Stream::SetLength(System.Int64) */, L_0, L_1);
 		return;
 	}
 }
@@ -48157,7 +48157,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebClientWriteStream_Write_mB05CA51BF280
 		int32_t L_2 = ___offset1;
 		int32_t L_3 = ___count2;
 		NullCheck(L_0);
-		VirtActionInvoker3< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(32 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_0, L_1, L_2, L_3);
+		VirtActionInvoker3< ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(33 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_0, L_1, L_2, L_3);
 		return;
 	}
 }

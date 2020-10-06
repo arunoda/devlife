@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using GameAnalyticsSDK;
+using mixpanel;
 using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine;
@@ -64,8 +65,13 @@ public class EventsManager
 
     public void Login(string userId)
     {
+        // PlayFab login
         var request = new LoginWithCustomIDRequest { CustomId = userId, CreateAccount = true };
         PlayFabClientAPI.LoginWithCustomID(request, OnLogin, OnError);
+
+        // Mixpanel identify
+        Mixpanel.Identify(userId);
+        Mixpanel.People.Set("$name", userId);
     }
 
     public void AddEvent(string EventName, Dictionary<string, object> Body = null)
@@ -75,7 +81,7 @@ public class EventsManager
             Body = new Dictionary<string, object>();
         }
 
-        Body.Add("sessionId", sessionId);
+        Body["sessionId"] = sessionId;
 
         if (!isLoggedIn)
         {
@@ -87,10 +93,20 @@ public class EventsManager
             return;
         }
 
+        // Sending data to PlayFab
         var request = new WriteClientPlayerEventRequest { EventName = EventName, Body = Body };
         PlayFabClientAPI.WritePlayerEvent(request, OnSuccess, OnError);
 
+        // Sending data to GameAnalytics
         GameAnalytics.NewDesignEvent(EventName);
+
+        // Sending data to Mixpanel
+        var mixPanelProps = new Value();
+        foreach(var item in Body)
+        {
+            mixPanelProps[item.Key] = item.Value.ToString();
+        }
+        Mixpanel.Track(EventName, mixPanelProps);
     }
 
     public void StartLevel(int level)
