@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class GameConfig : MonoBehaviour
 {
-    public GameObject[] drops;
+    public GameObject DropTwitter;
+    public GameObject DropStackOverflow;
+    public GameObject DropYouTube;
     public GameObject wallLeft;
     public GameObject wallRight;
     public GameObject gameDev;
@@ -14,11 +16,16 @@ public class GameConfig : MonoBehaviour
     public GameObject twitterStrom;
     public Text labelTasksCompleted;
     public Text labelTimeLeft;
-    public Text labelTotalTasksCompleted;
     public Text playPauseButton;
-    public Text labelHighScore;
     public GameObject animationNewHighScore;
-    public GameObject gameOverPanel;
+
+    // Items to use the at the each game level end
+    public Text labelHighScore;
+    public Text labelMinScore;
+    public Text labelTotalTasksCompletedNextLevel;
+    public Text labelTotalTasksCompletedRetry;
+    public GameObject gameRetryPanel;
+    public GameObject gameNextLevelPanel;
     public GameObject gameOverParticles;
 
     public enum DropType
@@ -29,12 +36,10 @@ public class GameConfig : MonoBehaviour
     };
 
     private string sessionId;
-    private int gameTime = 60;
-    private float devSpeed = 10;
     private float dropSpeed = 5;
-    private float walkSpeed = 1;
     private int noOfDropsInScreen = 2;
     private EventsManager eventsManager;
+    private LevelManager levelManager;
 
     // point system
     private int twitterHits = 0;
@@ -55,18 +60,39 @@ public class GameConfig : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        levelManager = new LevelManager();
         sessionId = System.Guid.NewGuid().ToString();
         eventsManager = new EventsManager(sessionId);
         mainCamera = Camera.main;
         GameConfig.current = this;
 
+        StartGame();
+    }
+
+    public void StartGame()
+    {
+        freezedCount = 1;
+        gameOver = false;
+
+        dropSpeed = 5;
+        noOfDropsInScreen = 2;
+
+        twitterHits = 0;
+        stackOverflowHits = 0;
+        youtubeHits = 0;
+
+        labelTotalTasksCompletedNextLevel.text = "0";
+        labelTotalTasksCompletedRetry.text = "0";
+        gameNextLevelPanel.SetActive(false);
+        gameRetryPanel.SetActive(false);
+
         EnsureResume();
         StartCoroutine(nameof(GameTimer));
         UnFreeze();
-        gameOverPanel.SetActive(false);
+        gameRetryPanel.SetActive(false);
 
         eventsManager.Login(GetUserName());
-        eventsManager.StartLevel(1);
+        eventsManager.StartLevel(levelManager.CurrentLevel);
     }
 
     private string GetUserName()
@@ -128,14 +154,27 @@ public class GameConfig : MonoBehaviour
         Instantiate(explodeGround, position, Quaternion.identity);
     }
 
+    private List<GameObject> GetDrops()
+    {
+        List<GameObject> drops = new List<GameObject>() { DropStackOverflow, DropYouTube };
+        if (levelManager.ShowTwitter)
+        {
+            drops.Add(DropTwitter);
+        }
+
+        return drops;
+    }
+
     private IEnumerator SpawnDrops()
     {
+        var drops = GetDrops();
+
         while (true)
         {
             // Spawn the drop
             var screenSize = GetScreenSize();
             var xPos = Random.Range(-screenSize.x + 0.5f, screenSize.x - 0.5f);
-            var drop = drops[Random.Range(0, drops.Length)];
+            var drop = drops[Random.Range(0, drops.Count)];
             Instantiate(drop, new Vector2(xPos, screenSize.y), Quaternion.identity);
 
 
@@ -147,23 +186,23 @@ public class GameConfig : MonoBehaviour
 
     private IEnumerator GameTimer()
     {
-        labelTimeLeft.text = "Time Left: " + gameTime;
+        labelTimeLeft.text = "Time Left: " + levelManager.GameTime;
 
-        for (int lc=0; lc<=gameTime; lc++)
+        for (int lc=0; lc<=levelManager.GameTime; lc++)
         {
             yield return new WaitForSecondsRealtime(1);
-            labelTimeLeft.text = "Time Left: " + (gameTime - lc);
+            labelTimeLeft.text = "Time Left: " + (levelManager.GameTime - lc);
 
             // increase drop speed
             if (lc > 0 && lc % 10 == 0)
             {
-                dropSpeed += 0.5f;
+                dropSpeed += levelManager.DropSpeedIncrease;
             }
 
             // increase no of drops on the screen
             if (lc > 0 && lc % 10 == 0)
             {
-                noOfDropsInScreen += 1;
+                noOfDropsInScreen += levelManager.NoOfDropsInScreenIncrease;
             }
 
         }
@@ -233,12 +272,12 @@ public class GameConfig : MonoBehaviour
 
     public float GetWalkSpeed()
     {
-        return walkSpeed;
+        return levelManager.WalkSpeed;
     }
 
     public float GetDevSpeed()
     {
-        return devSpeed;
+        return levelManager.DevSpeed;
     }
 
     public void NotifyHitOnFloor(DropType type, int dropId)
@@ -312,30 +351,44 @@ public class GameConfig : MonoBehaviour
         gameOver = true;
         int completedTasks = GetTasksCompleted();
 
-        // Manage Highscore
-        int highScore = PlayerPrefs.GetInt("HighScore", 0);
-        bool gotNewHighScore = completedTasks > highScore;
-        if (gotNewHighScore)
+        // Check Level Pass Logic
+        if (completedTasks >= levelManager.MinPoints)
         {
-            highScore = completedTasks;
-            PlayerPrefs.SetInt("HighScore", highScore);
-            PlayerPrefs.Save();
-            animationNewHighScore.SetActive(true);
-        }
+            // Manage Highscore
+            string scoreKey = "HighScore:" + levelManager.CurrentLevel;
+            int highScore = PlayerPrefs.GetInt(scoreKey, 0);
+            bool gotNewHighScore = completedTasks > highScore;
+            if (gotNewHighScore)
+            {
+                highScore = completedTasks;
+                PlayerPrefs.SetInt(scoreKey, highScore);
+                PlayerPrefs.Save();
+                animationNewHighScore.SetActive(true);
+            }
 
-        labelHighScore.text = string.Format("( High Score: {0} )", highScore);
-        labelTotalTasksCompleted.text = completedTasks.ToString();
+            labelHighScore.text = string.Format("( High Score: {0} )", highScore);
+            labelTotalTasksCompletedNextLevel.text = completedTasks.ToString();
+
+            // getting ready for the next level
+            levelManager.IncreaseLevel();
+
+            // show UI
+            gameOverParticles.SetActive(true);
+            gameNextLevelPanel.SetActive(true);
+        }
+        else
+        {
+            labelMinScore.text = string.Format("( Needs Tasks: {0} )", levelManager.MinPoints);
+            labelTotalTasksCompletedRetry.text = completedTasks.ToString();
+
+            // show UI
+            gameOverParticles.SetActive(true);
+            gameRetryPanel.SetActive(true);
+        }
+  
 
         StopCoroutine(spawnDropsHandler);
-        StartCoroutine(ShowEndScreen());
 
-        eventsManager.CompleteLevel(1, completedTasks);
-    }
-
-    IEnumerator ShowEndScreen()
-    {
-        gameOverParticles.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
-        gameOverPanel.SetActive(true);
+        eventsManager.CompleteLevel(levelManager.CurrentLevel, completedTasks);
     }
 }
