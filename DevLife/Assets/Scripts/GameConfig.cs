@@ -80,6 +80,7 @@ public class GameConfig : MonoBehaviour
         twitterHits = 0;
         stackOverflowHits = 0;
         youtubeHits = 0;
+        UpdateTasksCompleted();
 
         labelTotalTasksCompletedNextLevel.text = "0";
         labelTotalTasksCompletedRetry.text = "0";
@@ -320,7 +321,7 @@ public class GameConfig : MonoBehaviour
 
     private void UpdateTasksCompleted()
     {
-        labelTasksCompleted.text = "Tasks: " + GetTasksCompleted();
+        labelTasksCompleted.text = string.Format("Level: {0} - Tasks: {1}", levelManager.CurrentLevel, GetTasksCompleted());
     }
 
     public void PauseOrResume()
@@ -378,7 +379,7 @@ public class GameConfig : MonoBehaviour
         }
         else
         {
-            labelMinScore.text = string.Format("( Needs Tasks: {0} )", levelManager.MinPoints);
+            labelMinScore.text = string.Format("( But Needs {0} )", levelManager.MinPoints);
             labelTotalTasksCompletedRetry.text = completedTasks.ToString();
 
             // show UI
